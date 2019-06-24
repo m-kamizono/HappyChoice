@@ -21,7 +21,7 @@ public class TopController {
 
     @RequestMapping
     public String init(Model model, TopForm form) {
-        return "/top";
+        return "/hc_top";
     }
 
     @RequestMapping(value = "/search", method = RequestMethod.POST)
