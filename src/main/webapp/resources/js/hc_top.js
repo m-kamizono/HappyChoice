@@ -1,7 +1,7 @@
 /** トップ画面.js */
 function foodNum(num) {
-    document.foodNumForm.id.value = num;
-    document.foodNumForm.submit();
+    document.foodTypeForm.foodType.value = num;
+    document.foodTypeForm.submit();
 }
 
 /** 検索結果がない場合のモーダル制御 */

@@ -24,49 +24,51 @@
     <img src="/happychoice/resources/img/hc_logo.png" alt="" >
    </div>
    <div class="search">
-    <input type="text" />
-    <input id="js-show-modal" onclick="openModal();" type="submit" value="検索"  />
+    <form:form action="/happychoice/choiceFood" name="topForm" method="post" enctype="multipart/form-data">
+     <input type="text" name="searchWord" />
+     <input id="js-show-modal" type="submit" value="検索"  />
+    </form:form>
    </div>
   </div>
   <table class="foodtbl">
    <tr>
     <td>
      <div class="foodicn">
-      <img src="/happychoice/resources/img/rice.png" alt="" onclick="foodNum(10);">
+      <img src="/happychoice/resources/img/rice.png" alt="" onclick="foodNum(10);" />
      </div>
     </td>
     <td>
      <div class="foodicn">
-      <img src="/happychoice/resources/img/noodles.png" alt="" onclick="foodNum(20);">
+      <img src="/happychoice/resources/img/noodles.png" alt="" onclick="foodNum(20);" />
      </div>
     </td>
     <td>
      <div class="foodicn">
-      <img src="/happychoice/resources/img/meat.png" alt="" onclick="foodNum(30);">
-     </div>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     <div class="foodicn">
-      <img src="/happychoice/resources/img/fish.png" alt="" onclick="foodNum(40);">
-     </div>
-    </td>
-    <td>
-     <div class="foodicn">
-      <img src="/happychoice/resources/img/vegetables.png" alt="" onclick="foodNum(50);">
-     </div>
-    </td>
-    <td>
-     <div class="foodicn">
-      <img src="/happychoice/resources/img/soup.png" alt="" onclick="foodNum(60);">
+      <img src="/happychoice/resources/img/meat.png" alt="" onclick="foodNum(30);" />
      </div>
     </td>
    </tr>
    <tr>
     <td>
      <div class="foodicn">
-      <img src="/happychoice/resources/img/other.png" alt="" onclick="foodNum(70);">
+      <img src="/happychoice/resources/img/fish.png" alt="" onclick="foodNum(40);" />
+     </div>
+    </td>
+    <td>
+     <div class="foodicn">
+      <img src="/happychoice/resources/img/vegetables.png" alt="" onclick="foodNum(50);" />
+     </div>
+    </td>
+    <td>
+     <div class="foodicn">
+      <img src="/happychoice/resources/img/soup.png" alt="" onclick="foodNum(60);" />
+     </div>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <div class="foodicn">
+      <img src="/happychoice/resources/img/other.png" alt="" onclick="foodNum(70);" />
      </div>
     </td>
     <td>
@@ -94,8 +96,8 @@
  </div>
 
  <div style="display: none;">
-  <form:form action="/happychoice/foodcChoice" name="foodNumForm" method="post" enctype="multipart/form-data">
-   <input type="hidden" name="id" value="" />
+  <form:form action="/happychoice/choiceFood" name="foodTypeForm" method="post" enctype="multipart/form-data">
+   <input type="hidden" name="foodType" value="" />
   </form:form>
  </div>
 </body>
