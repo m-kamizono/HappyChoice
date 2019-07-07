@@ -22,7 +22,7 @@ public class HC_M_FoodDao {
     @Autowired
     public SqlManager sqlManager;
 
-    public List<HC_M_FoodDto> selectFoodByCond(int foodType, String searchWord) {
+    public List<HC_M_FoodDto> selectFoodByFoodType(int foodType, String searchWord) {
         final SqlResource sqlSrc = new ClasspathSqlResource("sql/" + "HC_M_FoodDao_selectFoodByCond.sql");
         Map<String, Object> paraMap = new HashMap<>();
         paraMap.put("foodType", foodType);
