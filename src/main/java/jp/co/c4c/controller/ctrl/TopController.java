@@ -25,12 +25,6 @@ public class TopController {
         return "/hc_top";
     }
 
-    @RequestMapping(value = "/foodcChoice", method = RequestMethod.POST)
-    public String foodchoice(Model model, TopForm form) {
-
-        return "/hc_top";
-    }
-
     @RequestMapping(value = "/search", method = RequestMethod.POST)
     public String search(Model model, TopForm form) {
     	List<SampleDto> list = topService.findAll();

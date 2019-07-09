@@ -1,5 +1,5 @@
 /** トップ画面.js */
-function foodNum(num) {
+function foodTypeNum(num) {
     document.foodTypeForm.foodType.value = num;
     document.foodTypeForm.submit();
 }
@@ -20,11 +20,11 @@ function openModal() {
     closeModal(closeBtn);
 
     function closeModal(elem) {
-	    if(!elem) return;
-	    // 背景クリックか閉じるボタンクリックでイベント発動
-	    elem.addEventListener('click', function() {
-	  	  // モーダルを表示させない
-	      modal.classList.remove('is-show');
-	    })
-	  }
+        if(!elem) return;
+        // 背景クリックか閉じるボタンクリックでイベント発動
+        elem.addEventListener('click', function() {
+            // モーダルを表示させない
+            modal.classList.remove('is-show');
+        })
+    }
 }

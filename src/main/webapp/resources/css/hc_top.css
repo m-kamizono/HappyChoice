@@ -3,12 +3,12 @@
  *  トップ画面CSS
  ===============================================================*/
 /* ロゴ・検索エリア */
-section.container div.topArea{
+section.container div.top-area {
  padding: 30px 0 30px 0;
 }
 
 /* ロゴ部分 */
-section.container div.logo img{
+section.container div.logo img {
  width: 100%;
 }
 
@@ -16,29 +16,27 @@ section.container div.logo img{
 section.container div.search {
  text-align: center;
 }
-section.container div.search .topSearchText {
-}
 
 /* アイコン部分 */
-table.foodtbl {
+table.foodtype-tbl {
  width: 100%;
  table-layout: fixed;
 }
 
-table.foodtbl tr {
+table.foodtype-tbl tr {
  width: 100%;
 }
 
-table.foodtbl tr td {
+table.foodtype-tbl tr td {
  width: 33%;
 }
 
-table.foodtbl tr td div.foodicn img {
+table.foodtype-tbl tr td div.foodtype-icn img {
  width: 100%;
 }
 
 /* モーダル */
-.modal {
+div.modal {
  position: fixed;
  left: 0;
  top: 0;
@@ -50,12 +48,12 @@ table.foodtbl tr td div.foodicn img {
  transition: .6s;
 }
 
-.modal.is-show {
+div.modal.is-show {
  opacity: 1;
  visibility: visible;
 }
 
-.modal-inner {
+div.modal div.modal-inner {
  position: absolute;
  left: 50%;
  top: 50%;
@@ -69,13 +67,17 @@ table.foodtbl tr td div.foodicn img {
  border-radius: 10px;
 }
 
-.close-btn {
+div.modal div.modal-inner div.modal-pa {
+ padding-top: 25px;
+}
+
+div.modal div.close-btn {
  line-height: 50px;
  text-align: center;
  cursor: pointer;
 }
 
-.black-background {
+div.modal div.black-background {
  position: absolute;
  left: 0;
  top: 0;
@@ -84,8 +86,4 @@ table.foodtbl tr td div.foodicn img {
  background-color: rgba(0,0,0,.8);
  z-index: 1;
  cursor: pointer;
-}
-
-.modal-pa {
- padding-top: 25px;
 }
