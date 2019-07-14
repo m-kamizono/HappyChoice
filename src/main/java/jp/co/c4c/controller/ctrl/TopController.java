@@ -21,12 +21,14 @@ public class TopController {
 
     @RequestMapping
     public String init(Model model, TopForm form) {
+
         return "/hc_top";
     }
 
     @RequestMapping(value = "/search", method = RequestMethod.POST)
     public String search(Model model, TopForm form) {
     	List<SampleDto> list = topService.findAll();
+
 
     	form.setName(list.get(0).getName());
         return "/top";

@@ -12,48 +12,91 @@
  <title>HappyChoice_TOP</title>
  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+ <link rel="stylesheet" href="/happychoice/resources/css/_cmn.css" />
  <link rel="stylesheet" href="/happychoice/resources/css/hc_top.css" />
+ <script src="/happychoice/resources/js/hc_top.js"></script>
 </head>
 <body>
- <section class="topContainer"><!-- TOP画面の全体領域確保 -->
+ <section class="container"><!-- TOP画面の全体領域確保 -->
  <!-- この中に書く -->
-  <div class="topArea">
+  <div class="top-area">
    <div class="logo">
-    <img src="/happychoice/resources/img/hc_logo.png" alt="" >
+    <img src="/happychoice/resources/img/hc_logo.png" alt="" />
    </div>
    <div class="search">
-    <input class="topSearchText" type="text" />
-    <input class="topSubtn" type="submit" value="検索"  />
+    <form:form action="/happychoice/foodList" name="foodListForm" method="post" enctype="multipart/form-data">
+     <input type="text" name="searchWord" />
+     <input id="js-show-modal" type="submit" value="検索" />
+    </form:form>
    </div>
   </div>
-  <div class="topGrid">
-   <div class="rice">
-    <img src="/happychoice/resources/img/rice.png" alt="" >
-   </div>
-   <div class="noodles">
-    <img src="/happychoice/resources/img/noodles.png" alt="" >
-   </div>
-   <div class="meat">
-    <img src="/happychoice/resources/img/meat.png" alt="" >
-   </div>
-   <div class="fish">
-    <img src="/happychoice/resources/img/fish.png" alt="" >
-   </div>
-   <div class="vegetables">
-    <img src="/happychoice/resources/img/vegetables.png" alt="" >
-   </div>
-   <div class="soup">
-    <img src="/happychoice/resources/img/soup.png" alt="" >
-   </div>
-   <div class="other">
-    <img src="/happychoice/resources/img/other.png" alt="" >
-   </div>
-   <div class="chara">
-    <img src="/happychoice/resources/img/chara.png" alt="" >
-   </div>
-
-  </div>
+  <table class="foodtype-tbl">
+   <tr>
+    <td>
+     <div class="foodtype-icn">
+      <img src="/happychoice/resources/img/rice.png" alt="" onclick="foodTypeNum(10);" />
+     </div>
+    </td>
+    <td>
+     <div class="foodtype-icn">
+      <img src="/happychoice/resources/img/noodles.png" alt="" onclick="foodTypeNum(20);" />
+     </div>
+    </td>
+    <td>
+     <div class="foodtype-icn">
+      <img src="/happychoice/resources/img/meat.png" alt="" onclick="foodTypeNum(30);" />
+     </div>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <div class="foodtype-icn">
+      <img src="/happychoice/resources/img/fish.png" alt="" onclick="foodTypeNum(40);" />
+     </div>
+    </td>
+    <td>
+     <div class="foodtype-icn">
+      <img src="/happychoice/resources/img/vegetables.png" alt="" onclick="foodTypeNum(50);" />
+     </div>
+    </td>
+    <td>
+     <div class="foodtype-icn">
+      <img src="/happychoice/resources/img/soup.png" alt="" onclick="foodTypeNum(60);" />
+     </div>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <div class="foodtype-icn">
+      <img src="/happychoice/resources/img/other.png" alt="" onclick="foodTypeNum(70);" />
+     </div>
+    </td>
+    <td>
+    </td>
+    <td>
+     <div class="foodtype-icn">
+      <img src="/happychoice/resources/img/chara.png" alt="" />
+     </div>
+    </td>
+   </tr>
+  </table>
  <!-- ここまで -->
  </section>
+ <!-- モーダル部分 -->
+ <div class="modal" id="js-modal">
+   <div class="modal-inner">
+    <div class="modal-pa">
+     <div>検索した料理名は</div>
+     <div>ヒットしませんでした。</div>
+    </div>
+    <div class="close-btn" id="js-close-btn"><input type="button" value="閉じる" /></div>
+   </div>
+   <div class="black-background" id="js-black-bg"></div>
+ </div>
+ <div style="display: none;">
+  <form:form action="/happychoice/foodList" name="foodTypeForm" method="post" enctype="multipart/form-data">
+   <input type="hidden" name="foodType" value="" />
+  </form:form>
+ </div>
 </body>
 </html>
