@@ -13,8 +13,8 @@ import jp.co.c4c.util.CommonUtil;
 @RequestMapping("/")
 public class TopController {
 
-	@Autowired
-	TopService topService;
+    @Autowired
+    TopService topService;
     @Autowired
     CommonUtil cmn;
 
