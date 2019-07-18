@@ -18,25 +18,25 @@ import jp.co.c4c.util.CommonUtil;
 @RequestMapping("/foodList")
 public class FoodListController {
 
-	@Autowired
-	FoodListService foodListService;
-	@Autowired
-	CommonUtil cmn;
+    @Autowired
+    FoodListService foodListService;
+    @Autowired
+    CommonUtil cmn;
 
-	/**
-	 * 料理候補取得
+    /**
+     * 料理候補取得
      * @param model
      * @param form
      * @return
      */
-	@RequestMapping(method={RequestMethod.POST})
-	public String init(Model model, FoodListForm form) {
-	    // 食品タイプを数値に変換 TODO:文字列
-	    int foodType = Integer.parseInt(form.getFoodType());
-	    // 食品タイプを引数にを呼び出す
-	    List<HC_M_FoodDto> foodList = foodListService.choiceFoodList(foodType, form.getSearchWord());
+    @RequestMapping(method={RequestMethod.POST})
+    public String init(Model model, FoodListForm form) {
+        // 食品タイプを数値に変換 TODO:文字列
+        int foodType = Integer.parseInt(form.getFoodType());
+        // 食品タイプを引数にを呼び出す
+        List<HC_M_FoodDto> foodList = foodListService.choiceFoodList(foodType, form.getSearchWord());
 
-         // 取得した食品リストが0件だった場合、ダイアログ表示　TODO:TopControllerを呼び出す
+        // 取得した食品リストが0件だった場合、ダイアログ表示　TODO:TopControllerを呼び出す
         if (CollectionUtils.isEmpty(foodList)) {
             return "/hc_top";
         }

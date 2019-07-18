@@ -18,12 +18,12 @@ public class TopController {
     @Autowired
     CommonUtil cmn;
 
-	/**
-	 * 初期表示
-	 * @param model
-	 * @param form
-	 * @return
-	 */
+    /**
+     * 初期表示
+     * @param model
+     * @param form
+     * @return
+     */
     @RequestMapping
     public String init(Model model, TopForm form) {
         return "/hc_top";
