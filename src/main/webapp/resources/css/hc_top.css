@@ -2,104 +2,88 @@
 /*===============================================================
  *  トップ画面CSS
  ===============================================================*/
-/* 背景全体の色 */
-body {
- background: #fffaaa;
-}
-
-/* TOP全体 */
-.topContainer {
- width: 100%;
- height: 100%;
-}
-
 /* ロゴ・検索エリア */
-section.topContainer div.topArea{
- padding: 50px 0 100px 0;
+section.container div.top-area {
+ padding: 30px 0 30px 0;
 }
 
 /* ロゴ部分 */
-section.topContainer div.logo img{
+section.container div.logo img {
  width: 100%;
 }
 
 /* 検索部分 */
-section.topContainer div.search {
+section.container div.search {
  text-align: center;
- padding: 80px;
-}
-section.topContainer div.search .topSearchText {
- width: 80%;
- height: 100px;
- font-size: 50px;
-}
-section.topContainer div.search .topSubtn {
- width: 15%;
- height: 100px;
- font-size: 50px;
 }
 
-/* TOP画面のグリッドレイアウト */
-section.topContainer div.topGrid {
- display: grid;
- grid-template:
- "rice noodles meat" auto
- "fish vegetables soup" auto
- "other chara chara" auto /
- 1fr     1fr    1fr;
+/* アイコン部分 */
+table.foodtype-tbl {
+ width: 100%;
+ table-layout: fixed;
 }
 
-/* 各グリッドの高さ確保 */
-div.topGrid div{
- height: 19.5vh;
+table.foodtype-tbl tr {
+ width: 100%;
 }
 
-/* グリッド内のアイコンのサイズ */
-div.topGrid img {
+table.foodtype-tbl tr td {
+ width: 33%;
+}
+
+table.foodtype-tbl tr td div.foodtype-icn img {
+ width: 100%;
+}
+
+/* モーダル */
+div.modal {
+ position: fixed;
+ left: 0;
+ top: 0;
+ width: 100%;
  height: 100%;
- width: auto;
+ z-index: 9999;
+ opacity: 0;
+ visibility: hidden;
+ transition: .6s;
 }
 
-/* 1段目:ジャンル(ごはん・パン/麺/肉) */
-/* ごはん・パンアイコン */
-div.topGrid div.rice {
- grid-area: rice;
+div.modal.is-show {
+ opacity: 1;
+ visibility: visible;
 }
 
-/* 麺アイコン */
-div.topGrid div.noodles {
- grid-area: noodles;
+div.modal div.modal-inner {
+ position: absolute;
+ left: 50%;
+ top: 50%;
+ transform: translate(-50%,-50%);
+ width: 60%;
+ height: 120px;
+ max-width: 360px;
+ text-align: center;
+ background-color: #fff;
+ z-index: 2;
+ border-radius: 10px;
 }
 
-/* 肉アイコン */
-div.topGrid div.meat {
- grid-area: meat;
+div.modal div.modal-inner div.modal-pa {
+ padding-top: 25px;
 }
 
-/* 2段目:ジャンル(魚/野菜/汁物) */
-/* 魚アイコン */
-div.topGrid div.fish {
- grid-area: fish;
+div.modal div.close-btn {
+ line-height: 50px;
+ text-align: center;
+ cursor: pointer;
 }
 
-/* 野菜アイコン */
-div.topGrid div.vegetables {
- grid-area: vegetables;
-}
-
-/* 汁物アイコン */
-div.topGrid div.soup {
- grid-area: soup;
-}
-
-/* 3段目:ジャンル(その他/キャラ) */
-/* その他アイコン */
-div.topGrid div.other {
- grid-area: other;
-}
-
-/* キャラ */
-div.topGrid div.chara {
- grid-area: chara;
- text-align: right;
+div.modal div.black-background {
+ position: absolute;
+ left: 0;
+ top: 0;
+ width: 100%;
+ height: 100%;
+ background-color: rgba(0,0,0,.8);
+ z-index: 1;
+ cursor: pointer;
 }
