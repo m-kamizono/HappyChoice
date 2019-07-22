@@ -1,23 +1,29 @@
 package jp.co.c4c.controller.form;
 
+import java.util.List;
+
+/**
+ * TOP画面 Formクラス
+ */
 public class TopForm {
 
-    /** ID */
-    private int id;
-    /** 名前 */
-    private String name;
+    // TODO: 仮の名前 検索候補を表示する文言リスト
+    /** 検索候補文言リスト */
+    private List<String> suggestWordList;
 
-    public int getId() {
-        return id;
+    /**
+     * 検索候補文言リスト
+     * @return 検索候補文言リスト
+     */
+    public List<String> getSuggestWordList() {
+        return suggestWordList;
     }
-    public void setId(int id) {
-        this.id = id;
-    }
-    public String getName() {
-        return name;
-    }
-    public void setName(String name) {
-        this.name = name;
+    /**
+     * 検索候補文言リスト
+     * @param suggestWordList 検索候補文言リスト
+     */
+    public void setSuggestWordList(List<String> suggestWordList) {
+        this.suggestWordList = suggestWordList;
     }
 
 }
