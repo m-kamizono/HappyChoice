@@ -19,7 +19,7 @@ public class HC_M_FoodDto {
     /** 主菜フラグ */
     private int maindishFlg;
     /** 食品タイプ(10:ごはん・パン 20:麺 30:肉 40:魚 50:野菜 60:汁物 70:その他) */
-    private int foodType;
+    private String foodType;
     /** 炭水化物 */
     private int carbo;
     /** タンパク質 */
@@ -125,14 +125,14 @@ public class HC_M_FoodDto {
      * 食品タイプ(10:ごはん・パン 20:麺 30:肉 40:魚 50:野菜 60:汁物 70:その他)を取得する
      * @return 食品タイプ(10:ごはん・パン 20:麺 30:肉 40:魚 50:野菜 60:汁物 70:その他)
      */
-    public int getFoodType() {
+    public String getFoodType() {
         return foodType;
     }
     /**
      * 食品タイプ(10:ごはん・パン 20:麺 30:肉 40:魚 50:野菜 60:汁物 70:その他)を設定する
      * @param foodType 食品タイプ(10:ごはん・パン 20:麺 30:肉 40:魚 50:野菜 60:汁物 70:その他)
      */
-    public void setFoodType(int foodType) {
+    public void setFoodType(String foodType) {
         this.foodType = foodType;
     }
     /**
