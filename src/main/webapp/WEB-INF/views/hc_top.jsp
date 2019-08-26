@@ -23,13 +23,20 @@
    <div class="logo">
     <img src="/happychoice/resources/img/hc_logo.png" alt="" />
    </div>
+   <div style="display: flex;">
+    <div id="searchAlert">
+    全角ひらがな・カタカナで入力してね
+    </div>
+    <div style="background: blue; height: 50px; width: 50%;">
+    おじさん
+    </div>
+   </div>
    <div class="search">
-    <form:form action="/happychoice/foodList" name="foodListForm" method="post" enctype="multipart/form-data">
-     <input type="text" name="searchWord" />
-     <input id="js-show-modal" type="submit" value="検索" />
-    </form:form>
+    <input type="text" name="searchWord" id="searchWord" value="" />
+    <input type="submit" id="js-show-modal" value="検索" onclick="valid();" />
    </div>
   </div>
+  <input type="button" onclick="openModal();" value="aaaaaa" />
   <table class="foodtype-tbl">
    <tr>
     <td>
@@ -94,6 +101,9 @@
    <div class="black-background" id="js-black-bg"></div>
  </div>
  <div style="display: none;">
+  <form:form action="/happychoice/foodList" name="foodListForm" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="searchWord" value="" />
+  </form:form>
   <form:form action="/happychoice/foodList" name="foodTypeForm" method="post" enctype="multipart/form-data">
    <input type="hidden" name="foodType" value="" />
   </form:form>
