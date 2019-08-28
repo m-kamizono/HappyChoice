@@ -1,0 +1,123 @@
+@charset "UTF-8";
+/*===============================================================
+ *  料理選択画面CSS
+ ===============================================================*/
+section.container .header {
+ padding: 20px 10px 10px 10px;
+ width: 100%;
+ height: 80px;
+ box-sizing: border-box;
+}
+
+section.container .header div.iconBox {
+ display: flex;
+ flex-direction: row;
+ justify-content: space-evenly;
+ width: 100%;
+ height: 100%;
+}
+
+section.container .header div.icon {
+ width: 33%;
+ height: 100%;
+ position: relative;
+}
+
+section.container .header div.icon img {
+ 　width: 65px;
+ height: 65px;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ -webkit-transform: translate(-50%, -50%);
+ transform: translate(-50%, -50%);
+}
+
+div.foodSort {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ -webkit-transform: translate(-50%, -50%);
+ transform: translate(-50%, -50%);
+ width: 45px;
+ height: 40px;
+ background: #ffb6c1;
+ border-radius: 5px;
+ color: #ffffff;
+ justify-content: center;
+ align-items: center;
+ display: flex;
+ flex-direction: row;
+}
+
+div.foodSort div.foodSort-inl-l {
+ display: inline-block;
+ vertical-align: middle;
+ height: 100%;
+}
+
+div.foodSort div.foodSort-inl-l div {
+ style: height: 45%;
+ font-size: 14px;
+}
+
+div.foodSort div.foodSort-inl-r {
+ display: inline-block;
+ vertical-align: middle;
+ font-size: 25px;
+ width: 15px;
+}
+
+section.container .contents {
+ padding: 10px;
+ width: 100%;
+ height: -webkit-calc(100% - 80px);
+ box-sizing: border-box;
+}
+
+section.container .contents div.scrollable‐box {
+ width: 100%;
+ height: 100%;
+ overflow: auto;
+}
+
+table.foodtype-tbl {
+ background: #ffffff;
+ width: 100%;
+}
+
+table.foodtype-tbl tr td div {
+ width: 100%;
+ height: 100px;
+ display: inline-block;
+ text-align: center;
+}
+
+table.foodtype-tbl tr td div img {
+ width: 87.5px;
+ height: 70px;
+}
+
+table.foodtype-tbl tr td div p {
+ width: 85%;
+ height: 20px;
+ font-family: sans-serif;
+ line-height: 1;
+ font-size: 10px;
+ overflow: hidden;
+ margin: auto;
+ text-align: center;
+}
+
+section.container .contents div.scrollable‐box div.backButton {
+ width: 60px;
+ height: 30px;
+ background: #ffb6c1;
+ position: fixed;
+ bottom: -webkit-calc(100% - 100vh + 20px);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ border-radius: 5px;
+ color: #ffffff;
+}
