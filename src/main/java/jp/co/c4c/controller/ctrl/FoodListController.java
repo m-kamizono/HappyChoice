@@ -15,7 +15,7 @@ import jp.co.c4c.service.FoodListService;
 import jp.co.c4c.util.CommonUtil;
 
 @Controller
-@RequestMapping("/foodList")
+@RequestMapping("/foodlist")
 public class FoodListController {
 
     @Autowired
@@ -44,7 +44,7 @@ public class FoodListController {
         // 取得した食品リストをformにセット
         form.setFoodList(foodList);
 
-        return "/choiceFood";
+        return "/hc_foodlist";
     }
 
 }
