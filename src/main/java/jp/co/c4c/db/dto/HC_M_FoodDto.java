@@ -83,14 +83,14 @@ public class HC_M_FoodDto {
     }
     /**
      * 食品名かなを取得する
-     * @return 食品名
+     * @return 食品名かな
      */
     public String getFoodNameKana() {
         return foodNameKana;
     }
     /**
      * 食品名かなを設定する
-     * @param foodName 食品名
+     * @param foodName 食品名かな
      */
     public void setFoodNameKana(String foodNameKana) {
         this.foodNameKana = foodNameKana;
