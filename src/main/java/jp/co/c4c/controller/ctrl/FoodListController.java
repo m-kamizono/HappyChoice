@@ -38,6 +38,7 @@ public class FoodListController {
 
         // 取得した食品リストが0件だった場合、ダイアログ表示　TODO:TopControllerを呼び出す
         if (CollectionUtils.isEmpty(foodList)) {
+            form.setAlertFlg(true);
             return "/hc_top";
         }
 

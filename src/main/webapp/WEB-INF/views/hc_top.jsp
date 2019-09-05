@@ -18,17 +18,20 @@
 </head>
 <body>
  <section class="container"><!-- TOP画面の全体領域確保 -->
+ <c:if test="${foodListForm.alertFlg}">
+  <input type="hidden" id="noSearchVal" />
+ </c:if>
  <!-- この中に書く -->
   <div class="top-area">
    <div class="logo">
     <img src="/happychoice/resources/img/hc_logo.png" alt="" />
    </div>
-   <div style="display: flex;">
-    <div id="searchAlert">
-    全角ひらがな・カタカナで入力してね
+   <div class="fuki-area">
+    <div class="fuki-back">
+     <p id="searchAlert">全角ひらがな<br/>カタカナで入力してね</p>
     </div>
-    <div style="background: blue; height: 50px; width: 50%;">
-    おじさん
+    <div class="chara-area">
+     <img src="/happychoice/resources/img/hc_chara001.png" alt="" />
     </div>
    </div>
    <div class="search">
@@ -36,7 +39,6 @@
     <input type="submit" id="js-show-modal" value="検索" onclick="valid();" />
    </div>
   </div>
-  <input type="button" onclick="openModal();" value="aaaaaa" />
   <table class="foodtype-tbl">
    <tr>
     <td>
@@ -81,9 +83,6 @@
     <td>
     </td>
     <td>
-     <div class="foodtype-icn">
-      <img src="/happychoice/resources/img/chara.png" alt="" />
-     </div>
     </td>
    </tr>
   </table>
@@ -91,14 +90,14 @@
  </section>
  <!-- モーダル部分 -->
  <div class="modal" id="js-modal">
-   <div class="modal-inner">
-    <div class="modal-pa">
-     <div>検索した料理名は</div>
-     <div>ヒットしませんでした。</div>
-    </div>
-    <div class="close-btn" id="js-close-btn"><input type="button" value="閉じる" /></div>
+  <div class="modal-inner">
+   <div class="modal-pa">
+    <div>検索した料理名は</div>
+    <div>ヒットしませんでした。</div>
    </div>
-   <div class="black-background" id="js-black-bg"></div>
+   <div class="close-btn" id="js-close-btn"><input type="button" value="閉じる" /></div>
+  </div>
+  <div class="black-background" id="js-black-bg"></div>
  </div>
  <div style="display: none;">
   <form:form action="/happychoice/foodList" name="foodListForm" method="post" enctype="multipart/form-data">
