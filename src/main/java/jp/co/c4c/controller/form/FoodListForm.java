@@ -13,6 +13,7 @@ public class FoodListForm {
     private String foodType;
     /** 検索ワード */
     private String searchWord;
+    // TODO: Entityを作成して変更する
     /** 食品選択肢リスト */
     private List<HC_M_FoodDto> foodList;
 

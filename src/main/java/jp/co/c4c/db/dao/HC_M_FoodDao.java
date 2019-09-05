@@ -1,6 +1,7 @@
 package jp.co.c4c.db.dao;
 
 import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -23,12 +24,17 @@ public class HC_M_FoodDao {
     public SqlManager sqlManager;
 
     public List<HC_M_FoodDto> selectFoodByCond(int foodType, String searchWord) {
-        final SqlResource sqlSrc = new ClasspathSqlResource("sql/" + "HC_M_FoodDao_selectFoodByCond.sql");
-        Map<String, Object> paraMap = new HashMap<>();
 
-        paraMap.put("foodType", foodType);
-        paraMap.put("searchWord", searchWord);
-        return sqlManager.getResultList(HC_M_FoodDto.class, sqlSrc, paraMap);
+        // TODO: SQLの修正が必要なので一旦コメントアウト 常に空のリストを返却する
+        List<HC_M_FoodDto> foodList = new ArrayList<>();
+        return foodList;
+
+//        final SqlResource sqlSrc = new ClasspathSqlResource("sql/" + "HC_M_FoodDao_selectFoodByCond.sql");
+//        Map<String, Object> paraMap = new HashMap<>();
+//
+//        paraMap.put("foodType", foodType);
+//        paraMap.put("searchWord", searchWord);
+//        return sqlManager.getResultList(HC_M_FoodDto.class, sqlSrc, paraMap);
     }
 
 }
