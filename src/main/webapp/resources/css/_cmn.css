@@ -4,12 +4,16 @@
  ===============================================================*/
 /* 背景全体の色 */
 body {
- background: #fffaaa;
  margin: 0;
 }
 
 /* コンテナ部分 */
 .container {
- width: 100%;
- height: 100%;
+ background: #fffaaa;
+ width: 100vw;
+ max-width: 375px;
+ height: 100vh;
+ max-height: 812px;
+ margin-right: auto;
+ margin-left: auto;
 }

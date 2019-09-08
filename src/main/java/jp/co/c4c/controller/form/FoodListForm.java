@@ -2,7 +2,7 @@ package jp.co.c4c.controller.form;
 
 import java.util.List;
 
-import jp.co.c4c.db.dto.HC_M_FoodDto;
+import jp.co.c4c.service.entity.FoodEntity;
 
 /**
  * 食品リスト画面 Formクラス
@@ -13,9 +13,8 @@ public class FoodListForm {
     private String foodType;
     /** 検索ワード */
     private String searchWord;
-    // TODO: Entityを作成して変更する
     /** 食品選択肢リスト */
-    private List<HC_M_FoodDto> foodList;
+    private List<FoodEntity> foodList;
 
     /**
      * 食品タイプ
@@ -49,14 +48,14 @@ public class FoodListForm {
      * 食品選択肢リスト
      * @return 食品選択肢リスト
      */
-    public List<HC_M_FoodDto> getFoodList() {
+    public List<FoodEntity> getFoodList() {
         return foodList;
     }
     /**
      * 食品選択肢リスト
      * @param foodList 食品選択肢リスト
      */
-    public void setFoodList(List<HC_M_FoodDto> foodList) {
+    public void setFoodList(List<FoodEntity> foodList) {
         this.foodList = foodList;
     }
 

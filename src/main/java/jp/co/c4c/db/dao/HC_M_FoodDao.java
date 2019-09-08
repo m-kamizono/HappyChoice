@@ -1,7 +1,6 @@
 package jp.co.c4c.db.dao;
 
 import java.util.HashMap;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -23,18 +22,22 @@ public class HC_M_FoodDao {
     @Autowired
     public SqlManager sqlManager;
 
-    public List<HC_M_FoodDto> selectFoodByCond(int foodType, String searchWord) {
+    public List<HC_M_FoodDto> selectFoodByCond(String foodType, String[] searchWords) {
+        final String template = "SEARCH_WORDS collate utf8_unicode_ci like concat('%[', '#DATA#', ']%') and" + "\n" + "";
+        StringBuffer searchWordCond = new StringBuffer();
+        if (searchWords != null) {
+            for (String searchWord : searchWords) {
+                searchWordCond.append(template.replace("#DATA#", searchWord+""));
+            }
+        }
 
-        // TODO: SQLの修正が必要なので一旦コメントアウト 常に空のリストを返却する
-        List<HC_M_FoodDto> foodList = new ArrayList<>();
-        return foodList;
-
-//        final SqlResource sqlSrc = new ClasspathSqlResource("sql/" + "HC_M_FoodDao_selectFoodByCond.sql");
-//        Map<String, Object> paraMap = new HashMap<>();
-//
-//        paraMap.put("foodType", foodType);
-//        paraMap.put("searchWord", searchWord);
-//        return sqlManager.getResultList(HC_M_FoodDto.class, sqlSrc, paraMap);
+        final SqlResource sqlSrc = new ClasspathSqlResource("sql/" + "HC_M_FoodDao_selectFoodByCond.sql");
+        Map<String, Object> param = new HashMap<>();
+        {
+            param.put("foodType", foodType);
+            param.put("searchWordCond", searchWordCond.toString());
+        }
+        return sqlManager.getResultList(HC_M_FoodDto.class, sqlSrc, param);
     }
 
 }

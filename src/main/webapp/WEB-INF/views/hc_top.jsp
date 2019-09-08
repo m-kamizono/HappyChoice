@@ -34,41 +34,41 @@
    <tr>
     <td>
      <div class="foodtype-icn">
-      <img src="/happychoice/resources/img/rice.png" alt="" onclick="foodTypeNum(10);" />
+      <img src="/happychoice/resources/img/foodTypeIcon_10.png" alt="" onclick="foodTypeNum(10);" />
      </div>
     </td>
     <td>
      <div class="foodtype-icn">
-      <img src="/happychoice/resources/img/noodles.png" alt="" onclick="foodTypeNum(20);" />
+      <img src="/happychoice/resources/img/foodTypeIcon_20.png" alt="" onclick="foodTypeNum(20);" />
      </div>
     </td>
     <td>
      <div class="foodtype-icn">
-      <img src="/happychoice/resources/img/meat.png" alt="" onclick="foodTypeNum(30);" />
-     </div>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     <div class="foodtype-icn">
-      <img src="/happychoice/resources/img/fish.png" alt="" onclick="foodTypeNum(40);" />
-     </div>
-    </td>
-    <td>
-     <div class="foodtype-icn">
-      <img src="/happychoice/resources/img/vegetables.png" alt="" onclick="foodTypeNum(50);" />
-     </div>
-    </td>
-    <td>
-     <div class="foodtype-icn">
-      <img src="/happychoice/resources/img/soup.png" alt="" onclick="foodTypeNum(60);" />
+      <img src="/happychoice/resources/img/foodTypeIcon_30.png" alt="" onclick="foodTypeNum(30);" />
      </div>
     </td>
    </tr>
    <tr>
     <td>
      <div class="foodtype-icn">
-      <img src="/happychoice/resources/img/other.png" alt="" onclick="foodTypeNum(70);" />
+      <img src="/happychoice/resources/img/foodTypeIcon_40.png" alt="" onclick="foodTypeNum(40);" />
+     </div>
+    </td>
+    <td>
+     <div class="foodtype-icn">
+      <img src="/happychoice/resources/img/foodTypeIcon_50.png" alt="" onclick="foodTypeNum(50);" />
+     </div>
+    </td>
+    <td>
+     <div class="foodtype-icn">
+      <img src="/happychoice/resources/img/foodTypeIcon_60.png" alt="" onclick="foodTypeNum(60);" />
+     </div>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <div class="foodtype-icn">
+      <img src="/happychoice/resources/img/foodTypeIcon_70.png" alt="" onclick="foodTypeNum(70);" />
      </div>
     </td>
     <td>
