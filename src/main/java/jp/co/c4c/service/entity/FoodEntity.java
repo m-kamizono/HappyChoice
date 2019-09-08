@@ -5,7 +5,7 @@ package jp.co.c4c.service.entity;
  */
 public class FoodEntity {
 
-    /** 選択された食品ID */
+    /** 食品ID */
     private int foodId;
     /** 食品名 */
     private String foodName;

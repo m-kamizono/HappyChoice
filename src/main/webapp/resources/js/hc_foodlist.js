@@ -1,6 +1,5 @@
 /** 食品リスト画面.js */
 function foodId(num) {
-	// TODO: foodListFormの名前を変えるとイベント起動しなくなる
     document.foodListForm.foodId.value = num;
     document.foodListForm.submit();
 }

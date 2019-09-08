@@ -23,9 +23,10 @@ public class HC_M_FoodDao {
     public SqlManager sqlManager;
 
     public List<HC_M_FoodDto> selectFoodByCond(String foodType, String[] searchWords) {
-        final String template = "SEARCH_WORDS collate utf8_unicode_ci like concat('%[', '#DATA#', ']%') and" + "\n" + "";
+
         StringBuffer searchWordCond = new StringBuffer();
         if (searchWords != null) {
+            final String template = "SEARCH_WORDS collate utf8_unicode_ci like concat('%[', '#DATA#', ']%') and" + "\n" + "";
             for (String searchWord : searchWords) {
                 searchWordCond.append(template.replace("#DATA#", searchWord+""));
             }
