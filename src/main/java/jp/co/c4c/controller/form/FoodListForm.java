@@ -16,7 +16,7 @@ public class FoodListForm {
     /** 食品選択肢リスト */
     private List<HC_M_FoodDto> foodList;
     /** 検索値結果フラグ */
-    private boolean alertFlg;
+    private boolean emptyResultFlg;
 
     /**
      * 食品タイプ
@@ -60,20 +60,19 @@ public class FoodListForm {
     public void setFoodList(List<HC_M_FoodDto> foodList) {
         this.foodList = foodList;
     }
-
     /**
      * 検索値結果フラグ
      * @return 検索値結果フラグ
      */
-    public boolean isAlertFlg() {
-        return alertFlg;
+    public boolean isEmptyResultFlg() {
+        return emptyResultFlg;
     }
     /**
      * 検索値結果フラグ
-     * @param alertFlg 検索値結果フラグ
+     * @param emptyResultFlg 検索値結果フラグ
      */
-    public void setAlertFlg(boolean alertFlg) {
-        this.alertFlg = alertFlg;
+    public void setEmptyResultFlg(boolean emptyResultFlg) {
+        this.emptyResultFlg = emptyResultFlg;
     }
 
 }

@@ -36,9 +36,9 @@ public class FoodListController {
         // 食品タイプを引数にを呼び出す
         List<HC_M_FoodDto> foodList = foodListService.choiceFoodList(foodType, form.getSearchWord());
 
-        // 取得した食品リストが0件だった場合、ダイアログ表示　TODO:TopControllerを呼び出す
+        // 取得した食品リストが0件だった場合、ダイアログ表示
         if (CollectionUtils.isEmpty(foodList)) {
-            form.setAlertFlg(true);
+            form.setEmptyResultFlg(true);
             return "/hc_top";
         }
 
