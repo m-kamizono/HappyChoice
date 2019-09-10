@@ -7,7 +7,7 @@ function foodTypeNum(num) {
 /** トップ画面読み込み時に検索結果がない時の処理 */
 window.onload = function() {
     var noSearchVal = document.getElementById('noSearchVal');
-    if (noSearchVal != '') {
+    if (noSearchVal.value == 'noVal') {
         openModal();
     }
 }

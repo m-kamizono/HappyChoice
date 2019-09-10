@@ -18,8 +18,8 @@
 </head>
 <body>
  <section class="container"><!-- TOP画面の全体領域確保 -->
- <c:if test="${foodListForm.alertFlg}">
-  <input type="hidden" id="noSearchVal" />
+ <c:if test="${foodListForm.emptyResultFlg}">
+  <input type="hidden" id="noSearchVal" value="noVal" />
  </c:if>
  <!-- この中に書く -->
   <div class="top-area">
