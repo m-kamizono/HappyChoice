@@ -4,7 +4,7 @@
  ===============================================================*/
 /* ロゴ・検索エリア */
 section.container div.top-area {
- padding: 30px 0 30px 0;
+ padding: 5px 0;
 }
 
 /* ロゴ部分 */
@@ -12,14 +12,44 @@ section.container div.logo img {
  width: 100%;
 }
 
+/* 吹き出しエリア */
+div.top-area div.fuki-area {
+ display: flex;
+ width: 290px;
+ margin: 0 auto;
+}
+
+div.top-area div.fuki-area div.fuki-back {
+ background-image: url('/happychoice/resources/img/hc_fukidashi.png');
+ height: 90px;
+ width: 200px;
+ background-size: cover;
+}
+
+#searchAlert{
+ padding: 0 12px;
+}
+
+/* キャラエリア */
+div.top-area div.fuki-area div.chara-area {
+ height: 90px;
+}
+
+div.top-area div.fuki-area div.chara-area img {
+ width: auto;
+ height: 100%;
+}
+
 /* 検索部分 */
 section.container div.search {
  text-align: center;
+ padding-top: 5px;
 }
 
 /* アイコン部分 */
 table.foodtype-tbl {
- width: 100%;
+ width: 95%;
+ margin: 0 auto;
  table-layout: fixed;
 }
 

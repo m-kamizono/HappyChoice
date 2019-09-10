@@ -18,16 +18,25 @@
 </head>
 <body>
  <section class="container"><!-- TOP画面の全体領域確保 -->
+ <c:if test="${foodListForm.emptyResultFlg}">
+  <input type="hidden" id="noSearchVal" value="noVal" />
+ </c:if>
  <!-- この中に書く -->
   <div class="top-area">
    <div class="logo">
     <img src="/happychoice/resources/img/hc_logo.png" alt="" />
    </div>
+   <div class="fuki-area">
+    <div class="fuki-back">
+     <p id="searchAlert">全角ひらがな<br/>カタカナで入力してね</p>
+    </div>
+    <div class="chara-area">
+     <img src="/happychoice/resources/img/hc_chara001.png" alt="" />
+    </div>
+   </div>
    <div class="search">
-    <form:form action="/happychoice/foodList" name="foodListForm" method="post" enctype="multipart/form-data">
-     <input type="text" name="searchWord" />
-     <input id="js-show-modal" type="submit" value="検索" />
-    </form:form>
+    <input type="text" name="searchWord" id="searchWord" value="" />
+    <input type="submit" id="js-show-modal" value="検索" onclick="valid();" />
    </div>
   </div>
   <table class="foodtype-tbl">
@@ -74,9 +83,6 @@
     <td>
     </td>
     <td>
-     <div class="foodtype-icn">
-      <img src="/happychoice/resources/img/chara.png" alt="" />
-     </div>
     </td>
    </tr>
   </table>
@@ -84,16 +90,19 @@
  </section>
  <!-- モーダル部分 -->
  <div class="modal" id="js-modal">
-   <div class="modal-inner">
-    <div class="modal-pa">
-     <div>検索した料理名は</div>
-     <div>ヒットしませんでした。</div>
-    </div>
-    <div class="close-btn" id="js-close-btn"><input type="button" value="閉じる" /></div>
+  <div class="modal-inner">
+   <div class="modal-pa">
+    <div>検索した料理名は</div>
+    <div>ヒットしませんでした。</div>
    </div>
-   <div class="black-background" id="js-black-bg"></div>
+   <div class="close-btn" id="js-close-btn"><input type="button" value="閉じる" /></div>
+  </div>
+  <div class="black-background" id="js-black-bg"></div>
  </div>
  <div style="display: none;">
+  <form:form action="/happychoice/foodlist" name="foodListForm" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="searchWord" value="" />
+  </form:form>
   <form:form action="/happychoice/foodlist" name="foodTypeForm" method="post" enctype="multipart/form-data">
    <input type="hidden" name="foodType" value="" />
   </form:form>
