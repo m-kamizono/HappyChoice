@@ -100,10 +100,10 @@
   <div class="black-background" id="js-black-bg"></div>
  </div>
  <div style="display: none;">
-  <form:form action="/happychoice/foodList" name="foodListForm" method="post" enctype="multipart/form-data">
+  <form:form action="/happychoice/foodlist" name="foodListForm" method="post" enctype="multipart/form-data">
     <input type="hidden" name="searchWord" value="" />
   </form:form>
-  <form:form action="/happychoice/foodList" name="foodTypeForm" method="post" enctype="multipart/form-data">
+  <form:form action="/happychoice/foodlist" name="foodTypeForm" method="post" enctype="multipart/form-data">
    <input type="hidden" name="foodType" value="" />
   </form:form>
  </div>
