@@ -34,8 +34,9 @@ public class FoodListController {
         // 食品タイプと検索ワードを引数に食品リストをとってくる
         List<FoodEntity> foodList = foodListService.choiceFoodList(form.getFoodType(), form.getSearchWord());
 
-        // 取得した食品リストが0件だった場合、ダイアログ表示　TODO:TopControllerを呼び出す
+        // 取得した食品リストが0件だった場合、ダイアログ表示
         if (CollectionUtils.isEmpty(foodList)) {
+            form.setEmptyResultFlg(true);
             return "/hc_top";
         }
 
