@@ -15,7 +15,7 @@ public class RegFoodService {
 
     @Transactional
     public void insert(HC_M_FoodDto dto) {
-        dao.insert(dto);
+//        dao.insert(dto);
     }
 
 }
