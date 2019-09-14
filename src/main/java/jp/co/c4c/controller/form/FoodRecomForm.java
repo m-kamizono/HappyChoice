@@ -5,9 +5,9 @@ import java.util.List;
 import jp.co.c4c.db.dto.HC_M_FoodDto;
 
 /**
- * ハッピーチョイス Formクラス
+ * 相方表示 Formクラス
  */
-public class HappyChoiceForm {
+public class FoodRecomForm {
 
     /** 選択された食品ID */
     private String foodId;

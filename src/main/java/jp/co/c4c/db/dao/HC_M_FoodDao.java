@@ -22,22 +22,23 @@ public class HC_M_FoodDao {
     @Autowired
     public SqlManager sqlManager;
 
-    public int insert(HC_M_FoodDto dto) {
-        final SqlResource sqlSrc = new ClasspathSqlResource("sql/" + "HC_M_FoodDao_insert.sql");
+    public List<HC_M_FoodDto> selectFoodByCond(String foodType, String[] searchWords) {
+
+        StringBuffer searchWordCond = new StringBuffer();
+        if (searchWords != null) {
+            final String template = "SEARCH_WORDS collate utf8_unicode_ci like concat('%[', '#DATA#', ']%') and" + "\n" + "";
+            for (String searchWord : searchWords) {
+                searchWordCond.append(template.replace("#DATA#", searchWord+""));
+            }
+        }
+
+        final SqlResource sqlSrc = new ClasspathSqlResource("sql/" + "HC_M_FoodDao_selectFoodByCond.sql");
         Map<String, Object> param = new HashMap<>();
         {
-            param.put("dto", dto);
+            param.put("foodType", foodType);
+            param.put("searchWordCond", searchWordCond.toString());
         }
-        return sqlManager.executeUpdate(sqlSrc, param);
-    }
-
-    public List<HC_M_FoodDto> selectFoodByCond(int foodType, String searchWord) {
-        final SqlResource sqlSrc = new ClasspathSqlResource("sql/" + "HC_M_FoodDao_selectFoodByCond.sql");
-        Map<String, Object> paraMap = new HashMap<>();
-
-        paraMap.put("foodType", foodType);
-        paraMap.put("searchWord", searchWord);
-        return sqlManager.getResultList(HC_M_FoodDto.class, sqlSrc, paraMap);
+        return sqlManager.getResultList(HC_M_FoodDto.class, sqlSrc, param);
     }
 
 }

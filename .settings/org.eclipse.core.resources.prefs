@@ -1,6 +1,5 @@
 eclipse.preferences.version=1
 encoding//src/main/java/jp/co/c4c/controller/ctrl/FoodListController.java=UTF-8
-encoding//src/main/java/jp/co/c4c/controller/ctrl/RegFoodController.java=UTF-8
+encoding//src/main/java/jp/co/c4c/controller/ctrl/FoodRecomController.java=UTF-8
 encoding//src/main/java/jp/co/c4c/controller/ctrl/TopController.java=UTF-8
-encoding//src/main/java/jp/co/c4c/controller/form/FoodForm.java=UTF-8
 encoding/<project>=UTF-8

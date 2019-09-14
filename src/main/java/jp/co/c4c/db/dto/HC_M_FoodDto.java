@@ -12,6 +12,8 @@ public class HC_M_FoodDto {
     private int foodId;
     /** 食品名 */
     private String foodName;
+    /** 食品名かな */
+    private String foodNameKana;
     /** 食品検索ワード */
     private String searchWords;
     /** 和洋中(10:和食 20:洋食 30:中華) */
@@ -78,6 +80,20 @@ public class HC_M_FoodDto {
      */
     public void setFoodName(String foodName) {
         this.foodName = foodName;
+    }
+    /**
+     * 食品名かなを取得する
+     * @return 食品名かな
+     */
+    public String getFoodNameKana() {
+        return foodNameKana;
+    }
+    /**
+     * 食品名かなを設定する
+     * @param foodName 食品名かな
+     */
+    public void setFoodNameKana(String foodNameKana) {
+        this.foodNameKana = foodNameKana;
     }
     /**
      * 食品検索ワードを取得する
