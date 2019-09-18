@@ -26,7 +26,7 @@ public class TopController {
      */
     @RequestMapping
     public String init(Model model, TopForm form) {
-        return "/hc_top";
+        return "/hc_recom";
     }
 
 }
