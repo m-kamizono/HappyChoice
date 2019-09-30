@@ -1,4 +1,4 @@
-/* HC_M_FoodDao_insert.sql */
+/* HC_M_FoodDao_updateFoodImg.sql */
 insert into hc_m_food(
   FOOD_NAME,
   SEARCH_WORDS,
