@@ -28,7 +28,6 @@ public class FoodRecomController {
      */
     @RequestMapping(method={RequestMethod.POST})
     public String init(Model model, FoodRecomForm form) {
-
         // TODO: 仮でTOP画面を返す return hc_foodrecom
         return "/hc_top";
     }
