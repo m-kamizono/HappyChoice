@@ -1,0 +1,63 @@
+@charset "UTF-8";
+/*===============================================================
+ *  相方表示画面CSS
+ ===============================================================*/
+/* ロゴ・検索エリア */
+section.container div.recom-area {
+ padding: 5px 0;
+}
+
+/* ロゴ部分 */
+section.container div.logo img {
+ width: 100%;
+}
+
+/* 吹き出しエリア*/
+div.fuki-area {
+ display: flex;
+ width: 100px;
+ margin: 0 auto;
+
+}
+div.fuki-back {
+ background-image: url('/happychoice/resources/img/hc_fukidashi.png');
+ height: 90px;
+ width: 200px;
+ background-size: cover;
+ float:left;
+}
+
+/*キャラの配置*/
+div.chara-position{
+	right:10px;
+	float:right;
+}
+
+/*ボタンの配置*/
+div.btnLeft{
+    text-align: left;
+    float: left;
+}
+div.btnRight{
+    text-align: right;
+    float:right;
+}
+
+/* アイコン部分 */
+table.foodtype-tbl {
+ width: 95%;
+ margin: 0 auto;
+ table-layout: fixed;
+}
+
+table.foodtype-tbl tr {
+ width: 100%;
+}
+
+table.foodtype-tbl tr td {
+ width: 33%;
+}
+
+table.foodtype-tbl tr td div.foodtype-icn img {
+ width: 100%;
+}
