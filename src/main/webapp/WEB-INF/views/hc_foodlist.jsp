@@ -58,7 +58,7 @@
       </c:forEach>
      </tr>
     </table>
-    <div class="backButton" onclick="history.back()">戻る</div>
+    <div class="btn" onclick="history.back()">戻る</div>
    </div>
   </section>
  </section>

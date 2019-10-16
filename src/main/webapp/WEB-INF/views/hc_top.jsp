@@ -36,7 +36,7 @@
    </div>
    <div class="search">
     <input type="text" name="searchWord" id="searchWord" value="" />
-    <input type="submit" id="js-show-modal" value="検索" onclick="valid();" />
+    <div class="btn" id="js-show-modal" onclick="valid();">検索</div>
    </div>
   </div>
   <table class="foodtype-tbl">

@@ -46,6 +46,10 @@ section.container div.search {
  padding-top: 5px;
 }
 
+section.container div.search div.btn {
+ display: inline-flex;
+}
+
 /* アイコン部分 */
 table.foodtype-tbl {
  width: 95%;
