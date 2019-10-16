@@ -106,6 +106,9 @@
   <form:form action="/happychoice/foodlist" name="foodTypeForm" method="post" enctype="multipart/form-data">
    <input type="hidden" name="foodType" value="" />
   </form:form>
+  <form:form action="/happychoice" name="emptyResulForm" method="post" enctype="multipart/form-data">
+   <input type="hidden" name="emptyResultFlg" value="" />
+  </form:form>
  </div>
 </body>
 </html>
