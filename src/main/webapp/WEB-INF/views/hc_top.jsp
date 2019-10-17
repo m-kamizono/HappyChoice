@@ -31,7 +31,7 @@
      <p id="searchAlert">全角ひらがな<br/>カタカナで入力してね</p>
     </div>
     <div class="chara-area">
-     <img src="/happychoice/resources/img/hc_chara001.png" alt="" />
+     <img src="/happychoice/resources/img/hc_chara00${topForm.characterId}.png" alt="" />
     </div>
    </div>
    <div class="search">
@@ -102,9 +102,11 @@
  <div style="display: none;">
   <form:form action="/happychoice/foodlist" name="foodListForm" method="post" enctype="multipart/form-data">
     <input type="hidden" name="searchWord" value="" />
+    <input type="hidden" name="characterId" value="${topForm.characterId}" />
   </form:form>
   <form:form action="/happychoice/foodlist" name="foodTypeForm" method="post" enctype="multipart/form-data">
    <input type="hidden" name="foodType" value="" />
+    <input type="hidden" name="characterId" value="${topForm.characterId}" />
   </form:form>
  </div>
 </body>

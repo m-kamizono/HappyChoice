@@ -65,6 +65,7 @@
  <div style="display: none;">
   <form:form action="/happychoice/foodrecom" name="foodListForm" method="post" enctype="multipart/form-data">
    <input type="hidden" name="foodId" value="" />
+   <input type="hidden" name="characterId" value="${foodListForm.characterId}" />
   </form:form>
  </div>
 </body>

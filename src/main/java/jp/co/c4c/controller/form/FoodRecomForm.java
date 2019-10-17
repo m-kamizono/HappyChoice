@@ -15,6 +15,8 @@ public class FoodRecomForm {
     private List<HC_M_FoodDto> foodList;
     /** 不足栄養メッセージ */
     private String lessNutMsg;
+    /** キャラクターID */
+    private String characterId;
 
     /**
      * 選択された食品ID
@@ -57,6 +59,20 @@ public class FoodRecomForm {
      */
     public void setLessNutMsg(String lessNutMsg) {
         this.lessNutMsg = lessNutMsg;
+    }
+    /**
+     * キャラクターID
+     * @return キャラクターID
+     */
+    public String getCharacterId() {
+        return characterId;
+    }
+    /**
+     * キャラクターID
+     * @param characterId キャラクターID
+     */
+    public void setCharacterId(String characterId) {
+        this.characterId = characterId;
     }
 
 }
