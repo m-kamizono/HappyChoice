@@ -53,14 +53,19 @@
    </tr>
   </table>
 
-
-
-   <div class="btnLeft">
-    <button>戻る</button>
+   <div class="fuki-area">
+    <div class="fuki-back">
+     <p id="lessNutMsg" style="margin-left: 2em;margin-top: 20pt;">
+      <font size="2">ビタミンC<br/>が不足しています！</font></p>
+    </div>
    </div>
-   <div class="btnRight">
-    <button>TOP</button>
-   </div>
+
+  <div class="chara-position">
+   <img src="/happychoice/resources/img/hc_chara001.png" alt="" width="100%"/>
+  </div>
+
+  <div class="backButton" onclick="history.back()">戻る</div>
+  <div class="topButton" onclick="location.href='hc_top.jsp'">TOP</div>
 
 </section>
 </body>

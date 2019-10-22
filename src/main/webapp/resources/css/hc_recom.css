@@ -14,23 +14,42 @@ section.container div.logo img {
 
 /* 吹き出しエリア*/
 div.fuki-area {
- display: flex;
- width: 100px;
- margin: 0 auto;
-
+    display: flex;
+    width: 260px;
+    height: 16%;
+    position: fixed;
+    left: 12%;
+    bottom: 13%;
 }
 div.fuki-back {
- background-image: url('/happychoice/resources/img/hc_fukidashi.png');
- height: 90px;
- width: 200px;
- background-size: cover;
- float:left;
+background-image: url(/happychoice/resources/img/hc_fukidashi.png);
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    float: left;
 }
 
 /*キャラの配置*/
 div.chara-position{
-	right:10px;
-	float:right;
+    width: 130px;
+    height: 130px;
+    position: fixed;
+    bottom: 13%;
+    right: 8%;
+}
+
+/* 吹き出しエリア */
+div.top-area div.fuki-area {
+ display: flex;
+ width: 290px;
+ margin: 0 auto;
+}
+
+div.fuki-area div.fuki-back {
+ background-image: url('/happychoice/resources/img/hc_fukidashi.png');
+ height: 90px;
+ width: 200px;
+ background-size: cover;
 }
 
 /*ボタンの配置*/
@@ -41,6 +60,34 @@ div.btnLeft{
 div.btnRight{
     text-align: right;
     float:right;
+}
+
+div.backButton {
+ width: 60px;
+ height: 30px;
+ background: #ffb6c1;
+ position: fixed;
+ left: 10%;
+ bottom: -webkit-calc(100% - 100vh + 20px);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ border-radius: 5px;
+ color: #ffffff;
+}
+
+div.topButton {
+ width: 60px;
+ height: 30px;
+ background: #ffb6c1;
+ position: fixed;
+ right: 10%;
+ bottom: -webkit-calc(100% - 100vh + 20px);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ border-radius: 5px;
+ color: #ffffff;
 }
 
 /* アイコン部分 */
