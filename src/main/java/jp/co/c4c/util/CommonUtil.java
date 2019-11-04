@@ -1,5 +1,7 @@
 package jp.co.c4c.util;
 
+import java.util.Base64;
+
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -29,8 +31,8 @@ public class CommonUtil {
     public String convByteToString(byte[] data) {
         if (data == null) { return null; }
 
-        // TODO: DBに保存されたデータで画像表示されるか確かめる
-        String dataString = new String(data);
+        // 画像ファイルをBase64 String に変換する
+        String dataString = Base64.getEncoder().encodeToString(data);
         return dataString;
     }
 

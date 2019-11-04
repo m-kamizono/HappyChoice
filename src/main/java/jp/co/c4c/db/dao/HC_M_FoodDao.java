@@ -11,6 +11,7 @@ import jp.co.c4c.db.dto.HC_M_FoodDto;
 import jp.sf.amateras.mirage.ClasspathSqlResource;
 import jp.sf.amateras.mirage.SqlManager;
 import jp.sf.amateras.mirage.SqlResource;
+import jp.sf.amateras.mirage.StringSqlResource;
 
 /**
  * HC_M_FoodDaoクラス
@@ -21,6 +22,16 @@ public class HC_M_FoodDao {
 
     @Autowired
     public SqlManager sqlManager;
+
+    public HC_M_FoodDto selectFoodByFoodId(String foodId) {
+
+        final SqlResource sqlSrc = new StringSqlResource("select * from "+HC_M_FoodDto.TBL+" where FOOD_ID=/*foodId*/;");
+        Map<String, Object> param = new HashMap<>();
+        {
+            param.put("foodId", foodId);
+        }
+        return sqlManager.getSingleResult(HC_M_FoodDto.class, sqlSrc, param);
+    }
 
     public List<HC_M_FoodDto> selectFoodByCond(String foodType, String[] searchWords) {
 
@@ -37,6 +48,16 @@ public class HC_M_FoodDao {
         {
             param.put("foodType", foodType);
             param.put("searchWordCond", searchWordCond.toString());
+        }
+        return sqlManager.getResultList(HC_M_FoodDto.class, sqlSrc, param);
+    }
+
+    public List<HC_M_FoodDto> selectRecomFoodByFoodId(String foodId) {
+
+        final SqlResource sqlSrc = new ClasspathSqlResource("sql/" + "HC_M_FoodDao_selectRecomFoodByFoodId.sql");
+        Map<String, Object> param = new HashMap<>();
+        {
+            param.put("foodId", foodId);
         }
         return sqlManager.getResultList(HC_M_FoodDto.class, sqlSrc, param);
     }

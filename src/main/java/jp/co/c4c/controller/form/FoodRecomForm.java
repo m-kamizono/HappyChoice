@@ -2,7 +2,7 @@ package jp.co.c4c.controller.form;
 
 import java.util.List;
 
-import jp.co.c4c.db.dto.HC_M_FoodDto;
+import jp.co.c4c.service.entity.FoodEntity;
 
 /**
  * 相方表示 Formクラス
@@ -11,10 +11,10 @@ public class FoodRecomForm {
 
     /** 選択された食品ID */
     private String foodId;
+    /** 選択した食品 */
+    private FoodEntity selectedFoodEty;
     /** おすすめ食品リスト */
-    private List<HC_M_FoodDto> foodList;
-    /** 不足栄養メッセージ */
-    private String lessNutMsg;
+    private List<FoodEntity> recomFoodEtyList;
 
     /**
      * 選択された食品ID
@@ -31,32 +31,32 @@ public class FoodRecomForm {
         this.foodId = foodId;
     }
     /**
+     * 選択した食品
+     * @return 選択した食品
+     */
+    public FoodEntity getSelectedFoodEty() {
+        return selectedFoodEty;
+    }
+    /**
+     * 選択した食品
+     * @param selectedFoodEty 選択した食品
+     */
+    public void setSelectedFoodEty(FoodEntity selectedFoodEty) {
+        this.selectedFoodEty = selectedFoodEty;
+    }
+    /**
      * おすすめ食品リスト
      * @return おすすめ食品リスト
      */
-    public List<HC_M_FoodDto> getFoodList() {
-        return foodList;
+    public List<FoodEntity> getRecomFoodEtyList() {
+        return recomFoodEtyList;
     }
     /**
      * おすすめ食品リスト
-     * @param foodList おすすめ食品リスト
+     * @param recomFoodEtyList おすすめ食品リスト
      */
-    public void setFoodList(List<HC_M_FoodDto> foodList) {
-        this.foodList = foodList;
-    }
-    /**
-     * 不足栄養メッセージ
-     * @return 不足栄養メッセージ
-     */
-    public String getLessNutMsg() {
-        return lessNutMsg;
-    }
-    /**
-     * 不足栄養メッセージ
-     * @param lessNutMsg 不足栄養メッセージ
-     */
-    public void setLessNutMsg(String lessNutMsg) {
-        this.lessNutMsg = lessNutMsg;
+    public void setRecomFoodEtyList(List<FoodEntity> recomFoodEtyList) {
+        this.recomFoodEtyList = recomFoodEtyList;
     }
 
 }
