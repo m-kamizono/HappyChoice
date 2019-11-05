@@ -30,7 +30,8 @@ public class TopController {
     public String init(Model model, TopForm form) {
         // キャラクターIDをランダム発行
         Random random = new Random();
-        int charaId = random.nextInt(3)+1;
+        // 3桁数字に成型
+        String charaId = String.format("%03d",random.nextInt(3)+1);
         form.setCharacterId(charaId);
 
         return "/hc_top";

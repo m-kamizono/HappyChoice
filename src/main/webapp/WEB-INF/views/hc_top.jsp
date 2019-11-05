@@ -31,7 +31,7 @@
      <p id="searchAlert">全角ひらがな<br/>カタカナで入力してね</p>
     </div>
     <div class="chara-area">
-     <img src="/happychoice/resources/img/hc_chara00${topForm.characterId}.png" alt="" />
+     <img src="/happychoice/resources/img/hc_chara${topForm.characterId}.png" alt="" />
     </div>
    </div>
    <div class="search">
