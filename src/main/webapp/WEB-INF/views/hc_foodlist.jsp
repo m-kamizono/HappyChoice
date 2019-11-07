@@ -49,7 +49,7 @@
        </c:if>
        <td>
         <div>
-         <img src="data:image/png;base64,${item.foodImg}" alt="" />
+         <img src="data:image/png;base64,${item.foodImg}" alt="" onclick="foodId(${item.foodId});" />
          <p>${item.foodName}</p>
         </div>
        </td>
