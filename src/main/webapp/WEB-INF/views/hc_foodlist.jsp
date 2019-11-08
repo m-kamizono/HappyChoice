@@ -49,9 +49,7 @@
        </c:if>
        <td>
         <div>
-         <!-- 画像データが用意できるまでサバの味噌煮を表示 -->
-         <img src="/happychoice/resources/img/sabanomisoni.png" alt="" onclick="foodId(${item.foodId});" />
-         <%-- <img src="${item.foodImg}" alt="" onclick="foodId(${item.foodId});" /> --%>
+         <img src="data:image/png;base64,${item.foodImg}" alt="" onclick="foodId(${item.foodId});" />
          <p>${item.foodName}</p>
         </div>
        </td>
