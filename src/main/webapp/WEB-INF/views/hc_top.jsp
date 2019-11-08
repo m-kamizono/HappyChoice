@@ -18,7 +18,7 @@
 </head>
 <body>
  <section class="container"><!-- TOP画面の全体領域確保 -->
- <c:if test="${foodListForm.emptyResultFlg}">
+ <c:if test="${topForm.emptyResultFlg}">
   <input type="hidden" id="noSearchVal" value="noVal" />
  </c:if>
  <!-- この中に書く -->

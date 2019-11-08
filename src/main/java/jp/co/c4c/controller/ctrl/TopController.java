@@ -29,4 +29,10 @@ public class TopController {
         return "/hc_top";
     }
 
+    @RequestMapping(value="modal")
+    public String modalOpen(Model model, TopForm form) {
+        form.setEmptyResultFlg(true);
+        return "/hc_top";
+    }
+
 }
