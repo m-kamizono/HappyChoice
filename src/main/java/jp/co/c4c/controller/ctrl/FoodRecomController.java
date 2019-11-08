@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import jp.co.c4c.controller.form.FoodRecomForm;
 import jp.co.c4c.service.FoodRecomService;
-import jp.co.c4c.util.CommonUtil;
 
 @Controller
 @RequestMapping("/foodrecom")
@@ -16,8 +15,6 @@ public class FoodRecomController {
 
     @Autowired
     FoodRecomService foodRecomService;
-    @Autowired
-    CommonUtil cmn;
 
     /**
      * おすすめ料理取得
@@ -32,8 +29,8 @@ public class FoodRecomController {
         // おすすめの食品データをformに詰める
         form.setRecomFoodEtyList(foodRecomService.choiceRecomFoodEtyList(form.getFoodId()));
 
-        return "/hc_top";
-        // return "/hc_foodrecom";
+        // TODO: hc_foodrecom が作られたらコメントアウト解除して編集
+        return "/hc_top"; // "/hc_foodrecom";
     }
 
 }

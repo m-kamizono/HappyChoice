@@ -8,17 +8,13 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import jp.co.c4c.db.dao.HC_M_FoodDao;
-import jp.co.c4c.db.dto.HC_M_FoodDto;
 import jp.co.c4c.service.entity.FoodEntity;
-import jp.co.c4c.util.CommonUtil;
 
 @Component
 public class FoodRecomService {
 
     @Autowired
     private HC_M_FoodDao foodDao;
-    @Autowired
-    CommonUtil cmn;
 
     /**
      * 選択料理取得
@@ -37,10 +33,7 @@ public class FoodRecomService {
      */
     @Transactional
     public List<FoodEntity> choiceRecomFoodEtyList(String foodId) {
-
-        List<HC_M_FoodDto> recomFoodList = foodDao.selectRecomFoodByFoodId(foodId);
-
-        return recomFoodList.stream().map(recomFood -> {
+        return foodDao.selectRecomFoodByFoodId(foodId).stream().map(recomFood -> {
             return new FoodEntity(recomFood);
         }).collect(Collectors.toList());
     }
