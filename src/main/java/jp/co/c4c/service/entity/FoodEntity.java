@@ -103,7 +103,7 @@ public class FoodEntity {
         this.foodId = foodDto.getFoodId();
         this.foodName = foodDto.getFoodName();
         this.foodNameKana = foodDto.getFoodNameKana();
-        if (foodDto.getFoodImg() == null) {
+        if (foodDto.getFoodImg() != null) {
             this.foodImg = Base64.getEncoder().encodeToString(foodDto.getFoodImg());
         }
         // TODO: 不足栄養素メッセージを設定する処理
