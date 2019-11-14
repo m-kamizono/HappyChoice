@@ -7,29 +7,30 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import jp.co.c4c.controller.form.FoodRecomForm;
-import jp.co.c4c.util.CommonUtil;
+import jp.co.c4c.service.FoodRecomService;
 
 @Controller
 @RequestMapping("/foodrecom")
 public class FoodRecomController {
 
-    // TODO: FoodRecomService に変更する
-//    @Autowired
-//    FoodListService foodListService;
     @Autowired
-    CommonUtil cmn;
+    FoodRecomService foodRecomService;
 
-    // TODO: 必要なコメントを追加する
     /**
-     *
+     * おすすめ料理取得
      * @param model
      * @param form
      * @return
      */
     @RequestMapping(method={RequestMethod.POST})
     public String init(Model model, FoodRecomForm form) {
-        // TODO: 仮でTOP画面を返す return hc_foodrecom
-        return "/hc_top";
+        // 選択された食品データをformに詰める
+        form.setSelectedFoodEty(foodRecomService.choiceSelectedFoodEty(form.getFoodId()));
+        // おすすめの食品データをformに詰める
+        form.setRecomFoodEtyList(foodRecomService.choiceRecomFoodEtyList(form.getFoodId()));
+
+        // TODO: hc_foodrecom が作られたらコメントアウト解除して編集
+        return "/hc_top"; // "/hc_foodrecom";
     }
 
 }
