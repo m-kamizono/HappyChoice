@@ -39,7 +39,7 @@
   <section class="contents">
    <div class="scrollable‐box">
    <input type="hidden" id="foodlist_sort" value="<c:forEach items="${foodListForm.foodList}" var="food" varStatus="sts"><c:if test="${sts.index>0}">,</c:if>${sts.index}</c:forEach>" />
-    <ul class="foodlist-ul" id="foodlist_ul">
+    <ul class="foodlist" id="foodlist_ul">
       <c:forEach items="${foodListForm.foodList}" var="item" varStatus="sts">
        <li id="foodlist_li_${sts.index}">
         <div>
