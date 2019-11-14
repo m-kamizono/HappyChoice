@@ -38,24 +38,17 @@
   </section>
   <section class="contents">
    <div class="scrollable‐box">
-    <table class="foodlist-tbl">
-     <!-- TODO: forEachの処理が綺麗じゃないので書き換える -->
-     <!-- TODO: セルの数が少なかった時の表示制御ができないないので修正する -->
-     <tr>
-      <c:forEach items="${foodListForm.foodList}" var="item" varStatus="loop">
-       <c:if test="${not loop.first and loop.index % 3 == 0}">
-        </tr>
-        <tr>
-       </c:if>
-       <td>
+   <input type="hidden" id="foodlist_sort" value="<c:forEach items="${foodListForm.foodList}" var="food" varStatus="sts"><c:if test="${sts.index>0}">,</c:if>${sts.index}</c:forEach>" />
+    <ul class="foodlist" id="foodlist_ul">
+      <c:forEach items="${foodListForm.foodList}" var="item" varStatus="sts">
+       <li id="foodlist_li_${sts.index}">
         <div>
          <img src="data:image/png;base64,${item.foodImg}" alt="" onclick="foodId(${item.foodId});" />
          <p>${item.foodName}</p>
         </div>
-       </td>
+       </li>
       </c:forEach>
-     </tr>
-    </table>
+    </ul>
     <div class="backButton" onclick="history.back()">戻る</div>
    </div>
   </section>

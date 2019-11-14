@@ -10,4 +10,6 @@ where
   /*IF searchWordCond != null*/
   /*$searchWordCond*/
   /*END*/
-  0 = 0;
+  0 = 0
+order by
+  FOOD_NAME_KANA asc;
