@@ -17,7 +17,7 @@ public class FoodEntity {
     private String foodNameKana;
     /** 画像データ */
     private String foodImg;
-    /** 画像データ */
+    /** 不足栄養メッセージ */
     private String lessNutMsg;
 
     /**
@@ -77,15 +77,15 @@ public class FoodEntity {
         this.foodImg = foodImg;
     }
     /**
-     * 不足栄養素を取得する
-     * @return 不足栄養素
+     * 不足栄養メッセージを取得する
+     * @return 不足栄養メッセージ
      */
     public String getLessNutMsg() {
         return lessNutMsg;
     }
     /**
-     * 不足栄養素を設定する
-     * @param foodImg 不足栄養素
+     * 不足栄養メッセージを設定する
+     * @param lessNutMsg 不足栄養メッセージ
      */
     public void setLessNutMsg(String lessNutMsg) {
         this.lessNutMsg = lessNutMsg;
@@ -107,6 +107,6 @@ public class FoodEntity {
             this.foodImg = Base64.getEncoder().encodeToString(foodDto.getFoodImg());
         }
         // TODO: 不足栄養素メッセージを設定する処理
-        this.lessNutMsg = "カルシウムと鉄分が足りないよ";
+        this.lessNutMsg = "不足しているカルシウムと鉄分を補う食品を食べよう！";
     }
 }
