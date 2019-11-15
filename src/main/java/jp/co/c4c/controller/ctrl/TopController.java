@@ -1,5 +1,7 @@
 package jp.co.c4c.controller.ctrl;
 
+import java.util.Random;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -26,6 +28,11 @@ public class TopController {
      */
     @RequestMapping
     public String init(Model model, TopForm form) {
+        Random random = new Random();
+        // 現在3種類のキャラクターIDをランダム発行 3桁数字に成型
+        String charaId = String.format("%03d",random.nextInt(3)+1);
+        form.setCharacterId(charaId);
+
         return "/hc_top";
     }
 

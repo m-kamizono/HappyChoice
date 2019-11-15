@@ -7,12 +7,29 @@ import java.util.List;
  */
 public class TopForm {
 
+    /** キャラクターID */
+    private String characterId;
     // TODO: 仮の名前 検索候補を表示する文言リスト
     /** 検索候補文言リスト */
     private List<String> suggestWordList;
     /** 検索値結果フラグ */
     private boolean emptyResultFlg;
 
+
+    /**
+     * キャラクターID
+     * @return キャラクターID
+     */
+    public String getCharacterId() {
+        return characterId;
+    }
+    /**
+     * キャラクターID
+     * @param characterId キャラクターID
+     */
+    public void setCharacterId(String characterId) {
+        this.characterId = characterId;
+    }
 
     /**
      * 検索候補文言リスト
