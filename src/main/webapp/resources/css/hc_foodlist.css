@@ -24,7 +24,7 @@ section.container .header div.icon {
 }
 
 section.container .header div.icon img {
- 　width: 65px;
+ width: 65px;
  height: 65px;
  position: absolute;
  top: 50%;
@@ -120,15 +120,14 @@ ul.foodlist li div p {
  text-align: center;
 }
 
-section.container .contents div.scrollable‐box div.backButton {
- width: 60px;
- height: 30px;
- background: #ffb6c1;
- position: fixed;
+/** 食品選択画面 戻るボタン */
+section.container .contents div.scrollable‐box div.btn {
  bottom: -webkit-calc(100% - 100vh + 20px);
+ position: fixed;
  display: flex;
- justify-content: center;
- align-items: center;
- border-radius: 5px;
- color: #ffffff;
+ }
+
+ section.container .contents div.scrollable‐box div.btn a {
+ color: #FFFFFF;
+ text-decoration: none;
 }

@@ -18,7 +18,7 @@
 </head>
 <body>
  <section class="container"><!-- TOP画面の全体領域確保 -->
- <c:if test="${foodListForm.emptyResultFlg}">
+ <c:if test="${topForm.emptyResultFlg}">
   <input type="hidden" id="noSearchVal" value="noVal" />
  </c:if>
  <!-- この中に書く -->
@@ -36,7 +36,7 @@
    </div>
    <div class="search">
     <input type="text" name="searchWord" id="searchWord" value="" />
-    <input type="submit" id="js-show-modal" value="検索" onclick="valid();" />
+    <div class="btn" id="js-show-modal" onclick="valid();">検索</div>
    </div>
   </div>
   <table class="foodtype-tbl">
@@ -107,6 +107,9 @@
   <form:form action="/happychoice/foodlist" name="foodTypeForm" method="post" enctype="multipart/form-data">
    <input type="hidden" name="foodType" value="" />
     <input type="hidden" name="characterId" value="${topForm.characterId}" />
+  </form:form>
+  <form:form action="/happychoice" name="emptyResulForm" method="post" enctype="multipart/form-data">
+   <input type="hidden" name="emptyResultFlg" value="" />
   </form:form>
  </div>
 </body>
