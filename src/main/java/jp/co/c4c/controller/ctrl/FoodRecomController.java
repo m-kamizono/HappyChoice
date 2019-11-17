@@ -29,8 +29,7 @@ public class FoodRecomController {
         // おすすめの食品データをformに詰める
         form.setRecomFoodEtyList(foodRecomService.choiceRecomFoodEtyList(form.getFoodId()));
 
-        // TODO: hc_foodrecom が作られたらコメントアウト解除して編集
-        return "/hc_top"; // "/hc_foodrecom";
+        return "/hc_foodrecom";
     }
 
 }
