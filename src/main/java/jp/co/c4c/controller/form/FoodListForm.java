@@ -15,8 +15,8 @@ public class FoodListForm {
     private String searchWord;
     /** 食品選択肢リスト */
     private List<FoodEntity> foodList;
-    /** 検索値結果フラグ */
-    private boolean emptyResultFlg;
+    /** キャラクターID */
+    private String characterId;
 
     /**
      * 食品タイプ
@@ -61,18 +61,18 @@ public class FoodListForm {
         this.foodList = foodList;
     }
     /**
-     * 検索値結果フラグ
-     * @return 検索値結果フラグ
+     * キャラクターID
+     * @return キャラクターID
      */
-    public boolean isEmptyResultFlg() {
-        return emptyResultFlg;
+    public String getCharacterId() {
+        return characterId;
     }
     /**
-     * 検索値結果フラグ
-     * @param emptyResultFlg 検索値結果フラグ
+     * キャラクターID
+     * @param characterId キャラクターID
      */
-    public void setEmptyResultFlg(boolean emptyResultFlg) {
-        this.emptyResultFlg = emptyResultFlg;
+    public void setCharacterId(String characterId) {
+        this.characterId = characterId;
     }
 
 }

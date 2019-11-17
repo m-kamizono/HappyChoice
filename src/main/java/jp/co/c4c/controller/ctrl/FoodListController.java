@@ -36,8 +36,7 @@ public class FoodListController {
 
         // 取得した食品リストが0件だった場合、ダイアログ表示
         if (CollectionUtils.isEmpty(foodList)) {
-            form.setEmptyResultFlg(true);
-            return "/hc_top";
+            return "forward:/modal";
         }
 
         // 取得した食品リストをformにセット

@@ -33,6 +33,8 @@ function openModal() {
         elem.addEventListener('click', function() {
             // モーダルを表示させない
             modal.classList.remove('is-show');
+            document.emptyResulForm.emptyResultFlg.value = false;
+            document.emptyResulForm.submit();
         })
     }
 }

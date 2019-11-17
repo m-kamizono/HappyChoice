@@ -8,6 +8,8 @@ import java.util.Date;
 
 public class HC_M_FoodDto {
 
+    public static final String TBL = "HC_M_Food";
+
     /** 食品ID */
     private int foodId;
     /** 食品名 */
