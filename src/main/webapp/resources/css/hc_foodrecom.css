@@ -1,0 +1,115 @@
+@charset "UTF-8";
+/*===============================================================
+ *  相方表示画面CSS
+ ===============================================================*/
+/* ロゴ・検索エリア */
+section.container section.header {
+ width: 100%;
+ padding: 5px 0;
+}
+
+/* ロゴ部分 */
+section.container section.header div.logo img {
+ width: 100%;
+}
+
+/* おすすめ食品部分 */
+section.container section.contents {
+ background: yellow;
+ width: -webkit-calc(100% - 20px);
+ height: -webkit-calc(100% - 190px - 110px - 40px);
+ margin: 0px 10px 20px 10px;
+}
+
+section.container section.contents div.scrollable‐box {
+ background: #ffffff;
+ width: 100%;
+ height: 100%;
+ overflow: auto;
+}
+
+ul.recomfoodlist {
+ width: 100%;
+ height: 100%;
+ padding: 0;
+ font-size: 0px;
+}
+
+ul.recomfoodlist li {
+ height: 105px;
+ width: 33.3%;
+ display: inline-block;
+ text-align: center;
+}
+
+ul.recomfoodlist li div img {
+ margin: 5px 0px 0px 0px;
+ width: 87.5px;
+ height: 70px;
+}
+
+ul.recomfoodlist li div p {
+ width: 80%;
+ height: 25px;
+ margin: 5px auto 0px auto;
+ font-family: sans-serif;
+ line-height: 1;
+ font-size: 10px;
+ overflow: hidden;
+ text-align: center;
+}
+
+/* 吹き出しエリア */
+div.fuki-area {
+ display: flex;
+ width: 290px;
+ margin: 0 auto;
+}
+
+div.fuki-area div.fuki-back {
+ background-image: url('/happychoice/resources/img/hc_fukidashi.png');
+ height: 90px;
+ width: 200px;
+ background-size: cover;
+}
+
+div.fuki-area div.fuki-back p {
+ width: 85%;
+ height: 70%;
+ margin: 10px 10px 10px 10px;
+ font-family: sans-serif;
+ line-height: 1;
+ font-size: 13px;
+ overflow: hidden;
+ text-align: center;
+}
+
+/* キャラエリア */
+div.fuki-area div.chara-area {
+ height: 90px;
+}
+
+div.fuki-area div.chara-area img {
+ width: auto;
+ height: 100%;
+}
+
+/** 食品選択画面 ボタンエリア */
+section.container div.btn-area {
+ width: 90%;
+ height: 40px;
+ padding: 1% 5% 1% 5%;
+ display: -webkit-flex;
+ justify-content: space-between;
+ bottom: -webkit-calc(100% - 100vh + 20px);
+}
+
+/** 食品選択画面 ボタン */
+section.container div.btn-area div.btn {
+ display: flex;
+}
+
+section.container div.btn-area div.btn a {
+ color: #FFFFFF;
+ text-decoration: none;
+}
