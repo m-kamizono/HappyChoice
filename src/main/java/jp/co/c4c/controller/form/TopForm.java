@@ -9,7 +9,6 @@ public class TopForm {
 
     /** キャラクターID */
     private String characterId;
-    // TODO: 仮の名前 検索候補を表示する文言リスト
     /** 検索候補文言リスト */
     private List<String> suggestWordList;
     /** 検索値結果フラグ */

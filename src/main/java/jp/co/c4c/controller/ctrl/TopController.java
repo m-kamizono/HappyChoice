@@ -32,6 +32,7 @@ public class TopController {
         // 現在3種類のキャラクターIDをランダム発行 3桁数字に成型
         String charaId = String.format("%03d",random.nextInt(3)+1);
         form.setCharacterId(charaId);
+        form.setSuggestWordList(topService.choiceFoodNameKana());
 
         return "/hc_top";
     }
