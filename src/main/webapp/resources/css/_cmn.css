@@ -1,0 +1,30 @@
+@charset "UTF-8";
+/*===============================================================
+ *  CMNCSS
+ ===============================================================*/
+/* 背景全体の色 */
+body {
+ margin: 0;
+}
+
+/* コンテナ部分 */
+.container {
+ background: #fffaaa;
+ width: 100vw;
+ max-width: 375px;
+ height: 100vh;
+ max-height: 812px;
+ margin-right: auto;
+ margin-left: auto;
+}
+
+/* ボタンスタイル */
+.btn {
+ width: 60px;
+ height: 30px;
+ background: #ffb6c1;
+ justify-content: center;
+ align-items: center;
+ border-radius: 5px;
+ color: #ffffff;
+}

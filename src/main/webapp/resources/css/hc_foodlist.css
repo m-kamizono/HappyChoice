@@ -1,0 +1,133 @@
+@charset "UTF-8";
+/*===============================================================
+ *  料理選択画面CSS
+ ===============================================================*/
+section.container .header {
+ padding: 20px 10px 10px 10px;
+ width: 100%;
+ height: 80px;
+ box-sizing: border-box;
+}
+
+section.container .header div.iconBox {
+ display: flex;
+ flex-direction: row;
+ justify-content: space-evenly;
+ width: 100%;
+ height: 100%;
+}
+
+section.container .header div.icon {
+ width: 33%;
+ height: 100%;
+ position: relative;
+}
+
+section.container .header div.icon img {
+ width: 65px;
+ height: 65px;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ -webkit-transform: translate(-50%, -50%);
+ transform: translate(-50%, -50%);
+}
+
+div.foodSort {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ -webkit-transform: translate(-50%, -50%);
+ transform: translate(-50%, -50%);
+ width: 45px;
+ height: 40px;
+ background: #ffb6c1;
+ border-radius: 5px;
+ color: #ffffff;
+ justify-content: center;
+ align-items: center;
+ display: flex;
+ flex-direction: row;
+}
+
+div.foodSort div.foodSort-inl-l {
+ display: inline-block;
+ vertical-align: middle;
+ height: 100%;
+}
+
+div.foodSort div.foodSort-inl-l div {
+ style: height: 45%;
+ font-size: 14px;
+}
+
+div.foodSort div.foodSort-inl-r {
+ display: inline-block;
+ vertical-align: middle;
+ font-size: 25px;
+ width: 15px;
+}
+
+section.container .contents {
+ padding: 10px;
+ width: 100%;
+ height: -webkit-calc(100% - 80px);
+ box-sizing: border-box;
+}
+
+section.container .contents div.scrollable‐box {
+ background: #ffffff;
+ width: 100%;
+ height: 100%;
+ overflow: auto;
+}
+
+ul.foodlist {
+ width: 100%;
+ height: 100%;
+ padding: 0;
+ font-size: 0px;
+}
+
+ul.foodlist::after { /* 戻るボタン分のpadding-bottomのための擬似要素 */
+ content: '';
+ display: block;
+ width: 1px;
+ height: 50px;
+}
+
+ul.foodlist li {
+ height: 105px;
+ width: 33.3%;
+ display: inline-block;
+ text-align: center;
+}
+
+ul.foodlist li div img {
+ margin: 5px 0px 0px 0px;
+ width: 87.5px;
+ height: 70px;
+}
+
+ul.foodlist li div p {
+ width: 80%;
+ height: 25px;
+ margin: 5px auto 0px auto;
+ font-family: sans-serif;
+ line-height: 1;
+ font-size: 10px;
+ overflow: hidden;
+ text-align: center;
+}
+
+/** 食品選択画面 戻るボタン */
+section.container .contents div.scrollable‐box div.btn {
+ bottom: -webkit-calc(100% - 100vh + 20px);
+ position: fixed;
+ display: flex;
+ }
+
+ section.container .contents div.scrollable‐box div.btn a {
+ color: #FFFFFF;
+ text-decoration: none;
+}

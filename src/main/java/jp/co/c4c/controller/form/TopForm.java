@@ -1,23 +1,63 @@
 package jp.co.c4c.controller.form;
 
+import java.util.List;
+
+/**
+ * TOP画面 Formクラス
+ */
 public class TopForm {
 
-    /** ID */
-    private int id;
-	/** 名前 */
-    private String name;
+    /** キャラクターID */
+    private String characterId;
+    // TODO: 仮の名前 検索候補を表示する文言リスト
+    /** 検索候補文言リスト */
+    private List<String> suggestWordList;
+    /** 検索値結果フラグ */
+    private boolean emptyResultFlg;
 
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
+
+    /**
+     * キャラクターID
+     * @return キャラクターID
+     */
+    public String getCharacterId() {
+        return characterId;
+    }
+    /**
+     * キャラクターID
+     * @param characterId キャラクターID
+     */
+    public void setCharacterId(String characterId) {
+        this.characterId = characterId;
+    }
+
+    /**
+     * 検索候補文言リスト
+     * @return 検索候補文言リスト
+     */
+    public List<String> getSuggestWordList() {
+        return suggestWordList;
+    }
+    /**
+     * 検索候補文言リスト
+     * @param suggestWordList 検索候補文言リスト
+     */
+    public void setSuggestWordList(List<String> suggestWordList) {
+        this.suggestWordList = suggestWordList;
+    }
+    /**
+     * 検索値結果フラグ
+     * @return 検索値結果フラグ
+     */
+    public boolean isEmptyResultFlg() {
+        return emptyResultFlg;
+    }
+    /**
+     * 検索値結果フラグ
+     * @param emptyResultFlg 検索値結果フラグ
+     */
+    public void setEmptyResultFlg(boolean emptyResultFlg) {
+        this.emptyResultFlg = emptyResultFlg;
+    }
 
 }

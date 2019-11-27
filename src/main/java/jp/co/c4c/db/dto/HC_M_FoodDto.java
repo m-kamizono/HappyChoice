@@ -8,10 +8,14 @@ import java.util.Date;
 
 public class HC_M_FoodDto {
 
+    public static final String TBL = "HC_M_Food";
+
     /** 食品ID */
     private int foodId;
     /** 食品名 */
     private String foodName;
+    /** 食品名かな */
+    private String foodNameKana;
     /** 食品検索ワード */
     private String searchWords;
     /** 和洋中(10:和食 20:洋食 30:中華) */
@@ -19,7 +23,7 @@ public class HC_M_FoodDto {
     /** 主菜フラグ */
     private int maindishFlg;
     /** 食品タイプ(10:ごはん・パン 20:麺 30:肉 40:魚 50:野菜 60:汁物 70:その他) */
-    private int foodType;
+    private String foodType;
     /** 炭水化物 */
     private int carbo;
     /** タンパク質 */
@@ -80,6 +84,20 @@ public class HC_M_FoodDto {
         this.foodName = foodName;
     }
     /**
+     * 食品名かなを取得する
+     * @return 食品名かな
+     */
+    public String getFoodNameKana() {
+        return foodNameKana;
+    }
+    /**
+     * 食品名かなを設定する
+     * @param foodName 食品名かな
+     */
+    public void setFoodNameKana(String foodNameKana) {
+        this.foodNameKana = foodNameKana;
+    }
+    /**
      * 食品検索ワードを取得する
      * @return 食品検索ワード
      */
@@ -125,14 +143,14 @@ public class HC_M_FoodDto {
      * 食品タイプ(10:ごはん・パン 20:麺 30:肉 40:魚 50:野菜 60:汁物 70:その他)を取得する
      * @return 食品タイプ(10:ごはん・パン 20:麺 30:肉 40:魚 50:野菜 60:汁物 70:その他)
      */
-    public int getFoodType() {
+    public String getFoodType() {
         return foodType;
     }
     /**
      * 食品タイプ(10:ごはん・パン 20:麺 30:肉 40:魚 50:野菜 60:汁物 70:その他)を設定する
      * @param foodType 食品タイプ(10:ごはん・パン 20:麺 30:肉 40:魚 50:野菜 60:汁物 70:その他)
      */
-    public void setFoodType(int foodType) {
+    public void setFoodType(String foodType) {
         this.foodType = foodType;
     }
     /**

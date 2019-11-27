@@ -1,0 +1,123 @@
+@charset "UTF-8";
+/*===============================================================
+ *  トップ画面CSS
+ ===============================================================*/
+/* ロゴ・検索エリア */
+section.container div.top-area {
+ padding: 5px 0;
+}
+
+/* ロゴ部分 */
+section.container div.logo img {
+ width: 100%;
+}
+
+/* 吹き出しエリア */
+div.top-area div.fuki-area {
+ display: flex;
+ width: 290px;
+ margin: 0 auto;
+}
+
+div.top-area div.fuki-area div.fuki-back {
+ background-image: url('/happychoice/resources/img/hc_fukidashi.png');
+ height: 90px;
+ width: 200px;
+ background-size: cover;
+}
+
+#searchAlert{
+ padding: 0 12px;
+}
+
+/* キャラエリア */
+div.top-area div.fuki-area div.chara-area {
+ height: 90px;
+}
+
+div.top-area div.fuki-area div.chara-area img {
+ width: auto;
+ height: 100%;
+}
+
+/* 検索部分 */
+section.container div.search {
+ text-align: center;
+ padding-top: 5px;
+}
+
+section.container div.search div.btn {
+ display: inline-flex;
+}
+
+/* アイコン部分 */
+table.foodtype-tbl {
+ width: 95%;
+ margin: 0 auto;
+ table-layout: fixed;
+}
+
+table.foodtype-tbl tr {
+ width: 100%;
+}
+
+table.foodtype-tbl tr td {
+ width: 33%;
+}
+
+table.foodtype-tbl tr td div.foodtype-icn img {
+ width: 100%;
+}
+
+/* モーダル */
+div.modal {
+ position: fixed;
+ left: 0;
+ top: 0;
+ width: 100%;
+ height: 100%;
+ z-index: 9999;
+ opacity: 0;
+ visibility: hidden;
+ transition: .6s;
+}
+
+div.modal.is-show {
+ opacity: 1;
+ visibility: visible;
+}
+
+div.modal div.modal-inner {
+ position: absolute;
+ left: 50%;
+ top: 50%;
+ transform: translate(-50%,-50%);
+ width: 60%;
+ height: 120px;
+ max-width: 360px;
+ text-align: center;
+ background-color: #fff;
+ z-index: 2;
+ border-radius: 10px;
+}
+
+div.modal div.modal-inner div.modal-pa {
+ padding-top: 25px;
+}
+
+div.modal div.close-btn {
+ line-height: 50px;
+ text-align: center;
+ cursor: pointer;
+}
+
+div.modal div.black-background {
+ position: absolute;
+ left: 0;
+ top: 0;
+ width: 100%;
+ height: 100%;
+ background-color: rgba(0,0,0,.8);
+ z-index: 1;
+ cursor: pointer;
+}
