@@ -39,6 +39,7 @@ ul.recomfoodlist li {
  height: 105px;
  width: 33.3%;
  display: inline-block;
+ vertical-align: top;
  text-align: center;
 }
 
