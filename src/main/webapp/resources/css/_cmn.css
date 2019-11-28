@@ -11,9 +11,9 @@ body {
 .container {
  background: #fffaaa;
  width: 100vw;
- max-width: 375px;
+ max-width: 414px;
  height: 100vh;
- max-height: 812px;
+ max-height: 896px;
  margin-right: auto;
  margin-left: auto;
 }
