@@ -21,7 +21,7 @@
   <!-- この中に書く -->
   <section class="header">
    <div class="logo">
-    <img src="/happychoice/resources/img/hc_fukidashi.png" alt="" />
+    <img src="/happychoice/resources/img/hc_recom.png" alt="" />
    </div>
   </section>
   <section class="contents">
