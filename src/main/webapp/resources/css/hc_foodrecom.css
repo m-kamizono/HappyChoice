@@ -96,7 +96,7 @@ div.fuki-area div.chara-area img {
 }
 
 /** おすすめ食品画面 ボタンエリア */
-section.container div.btn-area  {
+section.container div.btn-area {
  width: -webkit-calc(100% - 20px);
  height: 40px;
  margin: 0 10px;
