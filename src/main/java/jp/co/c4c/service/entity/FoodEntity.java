@@ -115,6 +115,7 @@ public class FoodEntity {
         if (foodDto.getFoodImg() != null) {
             this.foodImg = Base64.getEncoder().encodeToString(foodDto.getFoodImg());
         }
+
         // 不足栄養素メッセージを設定する処理
         if (lessNutFlg) {
             Map<String, Integer> nutMap = new TreeMap<String, Integer>();
@@ -130,7 +131,7 @@ public class FoodEntity {
             nutMap.put("食物繊維", foodDto.getFib());
             nutMap.put("食塩相当量", foodDto.getSalt());
 
-            // 比較関数Comparatorを使用してMap.Entryの値を比較し、降順でのソート
+            // 昇順でのソート
             List<Entry<String, Integer>> list_entries = new ArrayList<Entry<String, Integer>>(nutMap.entrySet());
             Collections.sort(list_entries, new Comparator<Entry<String, Integer>>() {
                 public int compare(Entry<String, Integer> obj1, Entry<String, Integer> obj2) {
@@ -157,4 +158,5 @@ public class FoodEntity {
             this.lessNutMsg = "不足している" + nutStr + "を補う食品を食べよう！";
         }
     }
+
 }
