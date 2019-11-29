@@ -21,10 +21,9 @@
   <!-- この中に書く -->
   <section class="header">
    <div class="logo">
-    <img src="/happychoice/resources/img/hc_fukidashi.png" alt="" />
+    <img src="/happychoice/resources/img/hc_recom.png" alt="" />
    </div>
   </section>
-
   <section class="contents">
    <div class="scrollable‐box">
     <ul class="recomfoodlist">
@@ -39,7 +38,6 @@
     </ul>
    </div>
   </section>
-
   <div class="fuki-area">
    <div class="fuki-back">
     <p>${foodRecomForm.selectedFoodEty.lessNutMsg}</p>
@@ -48,11 +46,10 @@
     <img src="/happychoice/resources/img/hc_chara${foodRecomForm.characterId}.png" alt="" />
    </div>
   </div>
-
-  <section class="btn-area">
+  <div class="btn-area">
    <div class="btn" onclick="history.back()">戻る</div>
-   <div class="btn" onclick="location.href='hc_top.jsp'">TOP</div>
-  </section>
+   <div class="btn" onclick="location.href='./'">TOP</div>
+  </div>
  </section>
 </body>
 </html>

@@ -100,6 +100,7 @@ ul.foodlist li {
  height: 105px;
  width: 33.3%;
  display: inline-block;
+ vertical-align: top;
  text-align: center;
 }
 
@@ -122,9 +123,9 @@ ul.foodlist li div p {
 
 /** 食品選択画面 戻るボタン */
 section.container .contents div.scrollable‐box div.btn {
- bottom: -webkit-calc(100% - 100vh + 20px);
  position: fixed;
  display: flex;
+ margin: -50px 0px 0px 0px;
  }
 
  section.container .contents div.scrollable‐box div.btn a {
