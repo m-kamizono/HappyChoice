@@ -48,7 +48,7 @@
   </div>
   <div class="btn-area">
    <div class="btn" onclick="history.back()">戻る</div>
-   <div class="btn" onclick="location.href='hc_top.jsp'">TOP</div>
+   <div class="btn" onclick="location.href='./'">TOP</div>
   </div>
  </section>
 </body>
