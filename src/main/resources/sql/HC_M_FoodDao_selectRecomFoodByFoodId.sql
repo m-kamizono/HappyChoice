@@ -15,7 +15,6 @@ where
   hc_m_food.MAINDISH_FLG = ABS(org.MAINDISH_FLG - 1) and
   hc_m_food.CARBO + org.CARBO < 14 and
   hc_m_food.FAT + org.FAT < 15 and
-  hc_m_food.SALT + org.SALT < 20 and
   hc_m_food.PROT + org.PROT > 3 and
   hc_m_food.VA + org.VA > 4 and
   hc_m_food.VB1 + org.VB1 > 4 and
