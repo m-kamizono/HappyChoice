@@ -22,7 +22,7 @@ public class FoodRecomService {
      * @return
      */
     @Transactional
-    public FoodEntity choiceSelectedFoodEty(String foodId) {
+    public FoodEntity choiceSelectedFoodEty(int foodId) {
         return new FoodEntity(foodDao.selectFoodByFoodId(foodId));
     }
 
@@ -32,7 +32,7 @@ public class FoodRecomService {
      * @return
      */
     @Transactional
-    public List<FoodEntity> choiceRecomFoodEtyList(String foodId) {
+    public List<FoodEntity> choiceRecomFoodEtyList(int foodId) {
         return foodDao.selectRecomFoodByFoodId(foodId).stream().map(recomFood -> {
             return new FoodEntity(recomFood);
         }).collect(Collectors.toList());

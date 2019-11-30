@@ -10,7 +10,7 @@ import jp.co.c4c.service.entity.FoodEntity;
 public class FoodRecomForm {
 
     /** 選択された食品ID */
-    private String foodId;
+    private int foodId;
     /** 選択した食品 */
     private FoodEntity selectedFoodEty;
     /** おすすめ食品リスト */
@@ -22,14 +22,14 @@ public class FoodRecomForm {
      * 選択された食品ID
      * @return 選択された食品ID
      */
-    public String getFoodId() {
+    public int getFoodId() {
         return foodId;
     }
     /**
      * 選択された食品ID
      * @param foodId 選択された食品ID
      */
-    public void setFoodId(String foodId) {
+    public void setFoodId(int foodId) {
         this.foodId = foodId;
     }
     /**
