@@ -7,8 +7,8 @@ import java.util.List;
  */
 public class TopForm {
 
-    /** キャラクターID */
-    private String characterId;
+    /** キャラクター番号 */
+    private String characterNum;
     // TODO: 仮の名前 検索候補を表示する文言リスト
     /** 検索候補文言リスト */
     private List<String> suggestWordList;
@@ -17,18 +17,18 @@ public class TopForm {
 
 
     /**
-     * キャラクターID
-     * @return キャラクターID
+     * キャラクター番号
+     * @return キャラクター番号
      */
-    public String getCharacterId() {
-        return characterId;
+    public String getCharacterNum() {
+        return characterNum;
     }
     /**
-     * キャラクターID
-     * @param characterId キャラクターID
+     * キャラクター番号
+     * @param characterNum キャラクター番号
      */
-    public void setCharacterId(String characterId) {
-        this.characterId = characterId;
+    public void setCharacterNum(String characterNum) {
+        this.characterNum = characterNum;
     }
 
     /**

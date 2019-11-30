@@ -15,8 +15,8 @@ public class FoodRecomForm {
     private FoodEntity selectedFoodEty;
     /** おすすめ食品リスト */
     private List<FoodEntity> recomFoodEtyList;
-    /** キャラクターID */
-    private String characterId;
+    /** キャラクター番号 */
+    private String characterNum;
 
     /**
      * 選択された食品ID
@@ -61,18 +61,18 @@ public class FoodRecomForm {
         this.recomFoodEtyList = recomFoodEtyList;
     }
     /**
-     * キャラクターID
-     * @return キャラクターID
+     * キャラクター番号
+     * @return キャラクター番号
      */
-    public String getCharacterId() {
-        return characterId;
+    public String getcharacterNum() {
+        return characterNum;
     }
     /**
-     * キャラクターID
-     * @param characterId キャラクターID
+     * キャラクター番号
+     * @param characterNum キャラクター番号
      */
-    public void setCharacterId(String characterId) {
-        this.characterId = characterId;
+    public void setcharacterNum(String characterNum) {
+        this.characterNum = characterNum;
     }
 
 }
