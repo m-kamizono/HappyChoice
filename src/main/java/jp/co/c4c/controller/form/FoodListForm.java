@@ -15,8 +15,8 @@ public class FoodListForm {
     private String searchWord;
     /** 食品選択肢リスト */
     private List<FoodEntity> foodList;
-    /** キャラクターID */
-    private String characterId;
+    /** キャラクター番号 */
+    private String characterNum;
 
     /**
      * 食品タイプ
@@ -61,18 +61,18 @@ public class FoodListForm {
         this.foodList = foodList;
     }
     /**
-     * キャラクターID
-     * @return キャラクターID
+     * キャラクター番号
+     * @return キャラクター番号
      */
-    public String getCharacterId() {
-        return characterId;
+    public String getCharacterNum() {
+        return characterNum;
     }
     /**
-     * キャラクターID
-     * @param characterId キャラクターID
+     * キャラクター番号
+     * @param characterNum キャラクター番号
      */
-    public void setCharacterId(String characterId) {
-        this.characterId = characterId;
+    public void setCharacterNum(String characterNum) {
+        this.characterNum = characterNum;
     }
 
 }

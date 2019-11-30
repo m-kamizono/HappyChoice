@@ -10,26 +10,26 @@ import jp.co.c4c.service.entity.FoodEntity;
 public class FoodRecomForm {
 
     /** 選択された食品ID */
-    private String foodId;
+    private int foodId;
     /** 選択した食品 */
     private FoodEntity selectedFoodEty;
     /** おすすめ食品リスト */
     private List<FoodEntity> recomFoodEtyList;
-    /** キャラクターID */
-    private String characterId;
+    /** キャラクター番号 */
+    private String characterNum;
 
     /**
      * 選択された食品ID
      * @return 選択された食品ID
      */
-    public String getFoodId() {
+    public int getFoodId() {
         return foodId;
     }
     /**
      * 選択された食品ID
      * @param foodId 選択された食品ID
      */
-    public void setFoodId(String foodId) {
+    public void setFoodId(int foodId) {
         this.foodId = foodId;
     }
     /**
@@ -61,18 +61,18 @@ public class FoodRecomForm {
         this.recomFoodEtyList = recomFoodEtyList;
     }
     /**
-     * キャラクターID
-     * @return キャラクターID
+     * キャラクター番号
+     * @return キャラクター番号
      */
-    public String getCharacterId() {
-        return characterId;
+    public String getcharacterNum() {
+        return characterNum;
     }
     /**
-     * キャラクターID
-     * @param characterId キャラクターID
+     * キャラクター番号
+     * @param characterNum キャラクター番号
      */
-    public void setCharacterId(String characterId) {
-        this.characterId = characterId;
+    public void setcharacterNum(String characterNum) {
+        this.characterNum = characterNum;
     }
 
 }

@@ -43,7 +43,7 @@
     <p>${foodRecomForm.selectedFoodEty.lessNutMsg}</p>
    </div>
    <div class="chara-area">
-    <img src="/happychoice/resources/img/hc_chara${foodRecomForm.characterId}.png" alt="" />
+    <img src="/happychoice/resources/img/hc_chara${foodRecomForm.characterNum}.png" alt="" />
    </div>
   </div>
   <div class="btn-area">

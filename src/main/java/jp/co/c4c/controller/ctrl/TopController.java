@@ -29,9 +29,9 @@ public class TopController {
     @RequestMapping
     public String init(Model model, TopForm form) {
         Random random = new Random();
-        // 現在3種類のキャラクターIDをランダム発行 3桁数字に成型
+        // 現在3種類のキャラクター番号をランダム発行 3桁数字に成型
         String charaId = String.format("%03d",random.nextInt(3)+1);
-        form.setCharacterId(charaId);
+        form.setCharacterNum(charaId);
 
         return "/hc_top";
     }

@@ -23,7 +23,7 @@ public class HC_M_FoodDao {
     @Autowired
     public SqlManager sqlManager;
 
-    public HC_M_FoodDto selectFoodByFoodId(String foodId) {
+    public HC_M_FoodDto selectFoodByFoodId(int foodId) {
 
         final SqlResource sqlSrc = new StringSqlResource("select * from "+HC_M_FoodDto.TBL+" where FOOD_ID=/*foodId*/;");
         Map<String, Object> param = new HashMap<>();
@@ -52,7 +52,7 @@ public class HC_M_FoodDao {
         return sqlManager.getResultList(HC_M_FoodDto.class, sqlSrc, param);
     }
 
-    public List<HC_M_FoodDto> selectRecomFoodByFoodId(String foodId) {
+    public List<HC_M_FoodDto> selectRecomFoodByFoodId(int foodId) {
 
         final SqlResource sqlSrc = new ClasspathSqlResource("sql/" + "HC_M_FoodDao_selectRecomFoodByFoodId.sql");
         Map<String, Object> param = new HashMap<>();
