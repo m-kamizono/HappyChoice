@@ -1,4 +1,4 @@
-/* HC_M_FoodDao_selectFoodByCond.sql */
+/* HC_M_FoodDao_selectFoodListByCond.sql */
 select
   *
 from

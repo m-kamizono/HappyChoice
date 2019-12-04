@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import jp.co.c4c.controller.form.FoodListForm;
 import jp.co.c4c.service.FoodListService;
 import jp.co.c4c.service.entity.FoodEntity;
-import jp.co.c4c.util.CommonUtil;
 
 @Controller
 @RequestMapping("/foodlist")
@@ -20,8 +19,6 @@ public class FoodListController {
 
     @Autowired
     FoodListService foodListService;
-    @Autowired
-    CommonUtil cmn;
 
     /**
      * 料理候補取得

@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import jp.co.c4c.controller.form.TopForm;
 import jp.co.c4c.service.TopService;
-import jp.co.c4c.util.CommonUtil;
 
 @Controller
 @RequestMapping("/")
@@ -17,8 +16,6 @@ public class TopController {
 
     @Autowired
     TopService topService;
-    @Autowired
-    CommonUtil cmn;
 
     /**
      * 初期表示
@@ -30,15 +27,21 @@ public class TopController {
     public String init(Model model, TopForm form) {
         Random random = new Random();
         // 現在3種類のキャラクター番号をランダム発行 3桁数字に成型
-        String charaId = String.format("%03d",random.nextInt(3)+1);
-        form.setCharacterNum(charaId);
+        form.setCharacterNum(String.format("%03d",random.nextInt(3)+1));
 
         return "/hc_top";
     }
 
+    /**
+     * 検索結果なしモーダル表示
+     * @param model
+     * @param form
+     * @return
+     */
     @RequestMapping(value="modal")
     public String modalOpen(Model model, TopForm form) {
         form.setEmptyResultFlg(true);
+
         return "/hc_top";
     }
 

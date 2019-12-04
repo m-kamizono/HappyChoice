@@ -33,7 +33,7 @@ public class HC_M_FoodDao {
         return sqlManager.getSingleResult(HC_M_FoodDto.class, sqlSrc, param);
     }
 
-    public List<HC_M_FoodDto> selectFoodByCond(String foodType, String[] searchWords) {
+    public List<HC_M_FoodDto> selectFoodListByCond(String foodType, String[] searchWords) {
 
         StringBuffer searchWordCond = new StringBuffer();
         if (searchWords != null) {
@@ -43,7 +43,7 @@ public class HC_M_FoodDao {
             }
         }
 
-        final SqlResource sqlSrc = new ClasspathSqlResource("sql/" + "HC_M_FoodDao_selectFoodByCond.sql");
+        final SqlResource sqlSrc = new ClasspathSqlResource("sql/" + "HC_M_FoodDao_selectFoodListByCond.sql");
         Map<String, Object> param = new HashMap<>();
         {
             param.put("foodType", foodType);
@@ -52,9 +52,9 @@ public class HC_M_FoodDao {
         return sqlManager.getResultList(HC_M_FoodDto.class, sqlSrc, param);
     }
 
-    public List<HC_M_FoodDto> selectRecomFoodByFoodId(int foodId) {
+    public List<HC_M_FoodDto> selectRecomFoodListByFoodId(int foodId) {
 
-        final SqlResource sqlSrc = new ClasspathSqlResource("sql/" + "HC_M_FoodDao_selectRecomFoodByFoodId.sql");
+        final SqlResource sqlSrc = new ClasspathSqlResource("sql/" + "HC_M_FoodDao_selectRecomFoodListByFoodId.sql");
         Map<String, Object> param = new HashMap<>();
         {
             param.put("foodId", foodId);

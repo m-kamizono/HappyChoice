@@ -9,7 +9,7 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <html>
 <head>
- <title>HappyChoice_TOP</title>
+ <title>HappyChoice</title>
  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
  <link rel="stylesheet" href="/happychoice/resources/css/_cmn.css" />
@@ -17,11 +17,11 @@
  <script src="/happychoice/resources/js/hc_top.js"></script>
 </head>
 <body>
- <section class="container"><!-- TOP画面の全体領域確保 -->
+ <section class="container">
+ <!-- TOP画面の全体領域 -->
  <c:if test="${topForm.emptyResultFlg}">
   <input type="hidden" id="noSearchVal" value="noVal" />
  </c:if>
- <!-- この中に書く -->
   <div class="top-area">
    <div class="logo">
     <img src="/happychoice/resources/img/hc_logo.png" alt="" />
@@ -80,13 +80,9 @@
       <img src="/happychoice/resources/img/foodTypeIcon_70.png" alt="" onclick="foodTypeNum(70);" />
      </div>
     </td>
-    <td>
-    </td>
-    <td>
-    </td>
    </tr>
   </table>
- <!-- ここまで -->
+ <!-- TOP画面の全体領域ここまで -->
  </section>
  <!-- モーダル部分 -->
  <div class="modal" id="js-modal">
@@ -99,6 +95,7 @@
   </div>
   <div class="black-background" id="js-black-bg"></div>
  </div>
+ <!-- モーダル部分ここまで -->
  <div style="display: none;">
   <form:form action="/happychoice/foodlist" name="foodListForm" method="post" enctype="multipart/form-data">
     <input type="hidden" name="searchWord" value="" />
