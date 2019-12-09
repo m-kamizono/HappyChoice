@@ -35,7 +35,7 @@
     </div>
    </div>
    <div class="search">
-    <input type="text" name="searchWord" id="searchWord" list=""  onInput="selectSearchWordText();" onkeyup="selectSearchWordText();">
+    <input type="text" name="searchWord" id="searchWord" list=""  onInput="selectSearchWordText();" >
     <datalist id="foodNameKana">
      <c:forEach items="${topForm.suggestWordList}" var="item" varStatus="sts">
       <option class="word" value="${item.foodNameKana}" label="${item.foodName}"></option>
