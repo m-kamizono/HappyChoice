@@ -2,6 +2,8 @@ package jp.co.c4c.controller.form;
 
 import java.util.List;
 
+import jp.co.c4c.service.entity.FoodNameEntity;
+
 /**
  * TOP画面 Formクラス
  */
@@ -9,9 +11,8 @@ public class TopForm {
 
     /** キャラクター番号 */
     private String characterNum;
-    // TODO: 仮の名前 検索候補を表示する文言リスト
     /** 検索候補文言リスト */
-    private List<String> suggestWordList;
+    private List<FoodNameEntity> suggestWordList;
     /** 検索値結果フラグ */
     private boolean emptyResultFlg;
 
@@ -35,14 +36,14 @@ public class TopForm {
      * 検索候補文言リスト
      * @return 検索候補文言リスト
      */
-    public List<String> getSuggestWordList() {
+    public List<FoodNameEntity> getSuggestWordList() {
         return suggestWordList;
     }
     /**
      * 検索候補文言リスト
      * @param suggestWordList 検索候補文言リスト
      */
-    public void setSuggestWordList(List<String> suggestWordList) {
+    public void setSuggestWordList(List<FoodNameEntity> suggestWordList) {
         this.suggestWordList = suggestWordList;
     }
     /**

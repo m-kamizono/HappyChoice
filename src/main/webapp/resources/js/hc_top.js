@@ -108,3 +108,13 @@ function cngHira(searchVal) {
     }
     return searchVal;
 }
+
+/** 確認用 */
+function selectSearchWordText() {
+    var searchWordText = document.getElementById( "searchWord" );
+    if (searchWordText.length == 0) {
+        searchWordText.attributes[3].value = "";
+    } else {
+        searchWordText.attributes[3].value = "foodNameKana";
+    }
+}
