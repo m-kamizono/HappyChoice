@@ -12,6 +12,7 @@
  <title>HappyChoice_FoodRecom</title>
  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+ <link rel="apple-touch-icon" href="/happychoice/resources/img/happychoice_icon.png">
  <link rel="stylesheet" href="/happychoice/resources/css/_cmn.css" />
  <link rel="stylesheet" href="/happychoice/resources/css/hc_foodrecom.css" />
 </head>
