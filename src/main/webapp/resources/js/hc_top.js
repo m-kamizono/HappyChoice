@@ -109,12 +109,8 @@ function cngHira(searchVal) {
     return searchVal;
 }
 
-/** 確認用 */
+/** 検索候補機能表示 */
 function selectSearchWordText() {
-    var searchWordText = document.getElementById( "searchWord" );
-    if (searchWordText.length == 0) {
-        searchWordText.attributes[3].value = "";
-    } else {
-        searchWordText.attributes[3].value = "foodNameKana";
-    }
+    var searchWordText = document.getElementById( 'searchWord' );
+    searchWordText.attributes[3].value = (searchWordText.length == 0) ? '' : 'foodNameKana';
 }

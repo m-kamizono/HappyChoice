@@ -23,7 +23,7 @@ public class TopService {
      */
     @Transactional
     public List<FoodNameEntity> choiceFoodNameKana() {
-        return foodDao.selectFoodNameKana().stream().map(foodName -> {
+        return foodDao.selectFoodName().stream().map(foodName -> {
             return new FoodNameEntity(foodName);
         }).collect(Collectors.toList());
     }

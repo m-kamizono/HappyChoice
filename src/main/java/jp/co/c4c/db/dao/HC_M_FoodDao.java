@@ -62,7 +62,7 @@ public class HC_M_FoodDao {
         return sqlManager.getResultList(HC_M_FoodDto.class, sqlSrc, param);
     }
 
-    public List<HC_M_FoodDto> selectFoodNameKana() {
+    public List<HC_M_FoodDto> selectFoodName() {
         final SqlResource sqlSrc = new StringSqlResource("select FOOD_NAME, FOOD_NAME_KANA from "+HC_M_FoodDto.TBL+ ";");
         return sqlManager.getResultList(HC_M_FoodDto.class, sqlSrc);
     }
