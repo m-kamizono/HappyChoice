@@ -32,6 +32,7 @@ public class TopController {
         // 現在3種類のキャラクター番号をランダム発行 3桁数字に成型
         String charaId = String.format("%03d",random.nextInt(3)+1);
         form.setCharacterNum(charaId);
+        form.setSuggestWordList(topService.choiceFoodName());
 
         return "/hc_top";
     }
@@ -39,6 +40,7 @@ public class TopController {
     @RequestMapping(value="modal")
     public String modalOpen(Model model, TopForm form) {
         form.setEmptyResultFlg(true);
+        form.setSuggestWordList(topService.choiceFoodName());
         return "/hc_top";
     }
 

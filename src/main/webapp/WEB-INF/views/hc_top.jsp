@@ -36,7 +36,12 @@
     </div>
    </div>
    <div class="search">
-    <input type="text" name="searchWord" id="searchWord" value="" />
+    <input type="text" name="searchWord" id="searchWord" list="" onInput="selectSearchWordText();" />
+    <datalist id="foodName">
+     <c:forEach items="${topForm.suggestWordList}" var="item">
+      <option class="word" value="${item.foodNameKana}" label="${item.foodName}"></option>
+     </c:forEach>
+    </datalist>
     <div class="btn" id="js-show-modal" onclick="valid();">検索</div>
    </div>
   </div>
