@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import jp.co.c4c.controller.form.FoodListForm;
+import jp.co.c4c.controller.form.FoodRecomForm;
 import jp.co.c4c.service.FoodListService;
 import jp.co.c4c.service.entity.FoodEntity;
 import jp.co.c4c.util.CommonUtil;
@@ -37,6 +38,12 @@ public class FoodListController {
         // 取得した食品リストが0件だった場合、ダイアログ表示
         if (CollectionUtils.isEmpty(foodList)) {
             return "forward:/modal";
+        }
+
+        if(foodList.size() == 1) {
+        	FoodRecomForm formRecom = new FoodRecomForm();
+        	formRecom.setFoodId(foodList.get(0).getFoodId());
+        	return "forward:/foodrecom";
         }
 
         // 取得した食品リストをformにセット
