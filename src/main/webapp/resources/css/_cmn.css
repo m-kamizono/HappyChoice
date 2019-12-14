@@ -2,6 +2,13 @@
 /*===============================================================
  *  CMNCSS
  ===============================================================*/
+/* 全体 */
+* {
+/* TODO: フォントと色を指定する */
+/*  font-family: Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+ color: #382825; */
+}
+
 /* 背景全体の色 */
 body {
  margin: 0;
