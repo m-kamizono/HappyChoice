@@ -9,7 +9,7 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <html>
 <head>
- <title>HappyChoice_FoodList</title>
+ <title>Happy Choice</title>
  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
  <link rel="apple-touch-icon" href="/happychoice/resources/img/happychoice_icon.png">
@@ -31,7 +31,6 @@
     </div>
     <div class="icon"></div>
     <div class="icon">
-     <!-- TODO: 並び替え -->
      <div onclick="ascdscFood();" class="foodSort">
       <div class="foodSort-inl-l">
        <div id="ascFood">A</div>
@@ -60,7 +59,7 @@
   </section>
  </section>
  <div style="display: none;">
-  <form:form action="/happychoice/foodrecom" name="foodListForm" method="post" enctype="multipart/form-data">
+  <form:form action="/happychoice/foodrecom" name="foodRecomForm" method="post" enctype="multipart/form-data">
    <input type="hidden" name="foodId" value="" />
    <input type="hidden" name="characterNum" value="${foodListForm.characterNum}" />
   </form:form>

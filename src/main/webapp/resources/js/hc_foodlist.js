@@ -1,10 +1,10 @@
 /** 食品リスト画面.js */
 function foodId(num) {
-    document.foodListForm.foodId.value = num;
-    document.foodListForm.submit();
+    document.foodRecomForm.foodId.value = num;
+    document.foodRecomForm.submit();
 }
 
-function ascdscFood(foodList) {
+function ascdscFood() {
 
     var sortVal = document.getElementById('foodlist_sort').value;
     if (sortVal == '') return;

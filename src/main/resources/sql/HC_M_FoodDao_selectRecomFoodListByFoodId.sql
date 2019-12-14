@@ -1,4 +1,4 @@
-/* HC_M_FoodDao_selectRecomFoodByFoodId.sql */
+/* HC_M_FoodDao_selectRecomFoodListByFoodId.sql */
 select
   hc_m_food.*
 from

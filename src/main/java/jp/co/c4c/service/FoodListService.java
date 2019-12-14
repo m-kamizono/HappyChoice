@@ -31,7 +31,7 @@ public class FoodListService {
         // searchWordがnullの時にsplitしないようにチェックしてnullじゃなかったら半角・全角空白で区切る
         String[] searchWords = (searchWord == null) ? null : searchWord.split("( |　)+");
 
-        List<HC_M_FoodDto> fooodList = foodDao.selectFoodByCond(foodType, searchWords);
+        List<HC_M_FoodDto> fooodList = foodDao.selectFoodListByCond(foodType, searchWords);
 
         // List<HC_M_FoodDto>をList<FoodEntity>にして返す
         return fooodList.stream().map(food -> {

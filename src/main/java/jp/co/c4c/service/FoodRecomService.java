@@ -33,7 +33,7 @@ public class FoodRecomService {
      */
     @Transactional
     public List<FoodEntity> choiceRecomFoodEtyList(int foodId) {
-        return foodDao.selectRecomFoodByFoodId(foodId).stream().map(recomFood -> {
+        return foodDao.selectRecomFoodListByFoodId(foodId).stream().map(recomFood -> {
             return new FoodEntity(recomFood, false);
         }).collect(Collectors.toList());
     }
