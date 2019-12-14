@@ -54,8 +54,8 @@
        </li>
       </c:forEach>
     </ul>
-    <div class="btn" onclick="history.back()">戻る</div>
    </div>
+   <div class="btn" onclick="history.back()">戻る</div>
   </section>
  </section>
  <div style="display: none;">
