@@ -26,6 +26,7 @@ section.container section.contents div.scrollable‐box {
  width: 100%;
  height: 100%;
  overflow: auto;
+ border-radius: 5px;
 }
 
 ul.recomfoodlist {
@@ -47,6 +48,7 @@ ul.recomfoodlist li div img {
  margin: 5px 0px 0px 0px;
  width: 87.5px;
  height: 70px;
+ border-radius: 5px;
 }
 
 ul.recomfoodlist li div p {
@@ -77,12 +79,18 @@ div.fuki-area div.fuki-back {
 div.fuki-area div.fuki-back p {
  width: 85%;
  height: 70%;
- margin: 10px 10px 10px 10px;
- font-family: sans-serif;
+ margin: 10px;
  line-height: 1;
  font-size: 13px;
  overflow: hidden;
+ vertical-align: middle;
  text-align: center;
+ display: -webkit-flex;
+ display: flex;
+ -webkit-align-items: center;
+ align-items: center;
+ -webkit-justify-content: center;
+ justify-content: center;
 }
 
 /* キャラエリア */
