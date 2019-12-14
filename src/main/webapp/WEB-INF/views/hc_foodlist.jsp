@@ -9,19 +9,25 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <html>
 <head>
-<title>HappyChoice</title>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
-<link rel="stylesheet" href="resources/css/_cmn.css" />
-<link rel="stylesheet" href="resources/css/hc_foodlist.css" />
-<script src="resources/js/hc_foodlist.js"></script>
+ <title>Happy Choice</title>
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+ <link rel="apple-touch-icon" href="/happychoice/resources/img/happychoice_icon.png">
+ <link rel="stylesheet" href="resources/css/_cmn.css" />
+ <link rel="stylesheet" href="resources/css/hc_foodlist.css" />
+ <script src="resources/js/hc_foodlist.js"></script>
 </head>
 <body>
  <section class="container">
   <section class="header">
    <div class="iconBox">
     <div class="icon">
-     <img src="/happychoice/resources/img/foodTypeIcon_${foodListForm.foodType}.png" alt="">
+     <c:if test="${empty foodListForm.foodType}">
+      <img src="/happychoice/resources/img/foodSearch.png" alt="">
+     </c:if>
+     <c:if test="${!empty foodListForm.foodType}">
+      <img src="/happychoice/resources/img/foodTypeIcon_${foodListForm.foodType}.png" alt="">
+     </c:if>
     </div>
     <div class="icon"></div>
     <div class="icon">

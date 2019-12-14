@@ -12,6 +12,7 @@
  <title>HappyChoice</title>
  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+ <link rel="apple-touch-icon" href="/happychoice/resources/img/happychoice_icon.png">
  <link rel="stylesheet" href="/happychoice/resources/css/_cmn.css" />
  <link rel="stylesheet" href="/happychoice/resources/css/hc_top.css" />
  <script src="/happychoice/resources/js/hc_top.js"></script>
@@ -35,7 +36,12 @@
     </div>
    </div>
    <div class="search">
-    <input type="text" name="searchWord" id="searchWord" value="" />
+    <input type="text" name="searchWord" id="searchWord" list="" onInput="selectSearchWordText();" />
+    <datalist id="foodName">
+     <c:forEach items="${topForm.suggestWordList}" var="item">
+      <option class="word" value="${item.foodNameKana}" label="${item.foodName}"></option>
+     </c:forEach>
+    </datalist>
     <div class="btn" id="js-show-modal" onclick="valid();">検索</div>
    </div>
   </div>
@@ -98,12 +104,12 @@
  <!-- モーダル部分ここまで -->
  <div style="display: none;">
   <form:form action="/happychoice/foodlist" name="foodListForm" method="post" enctype="multipart/form-data">
-    <input type="hidden" name="searchWord" value="" />
-    <input type="hidden" name="characterNum" value="${topForm.characterNum}" />
+   <input type="hidden" name="searchWord" value="" />
+   <input type="hidden" name="characterNum" value="${topForm.characterNum}" />
   </form:form>
   <form:form action="/happychoice/foodlist" name="foodTypeForm" method="post" enctype="multipart/form-data">
    <input type="hidden" name="foodType" value="" />
-    <input type="hidden" name="characterNum" value="${topForm.characterNum}" />
+   <input type="hidden" name="characterNum" value="${topForm.characterNum}" />
   </form:form>
   <form:form action="/happychoice" name="emptyResulForm" method="post" enctype="multipart/form-data">
    <input type="hidden" name="emptyResultFlg" value="" />
