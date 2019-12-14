@@ -22,7 +22,7 @@ public class TopService {
      * @return
      */
     @Transactional
-    public List<FoodNameEntity> choiceFoodName() {
+    public List<FoodNameEntity> getFoodName() {
         return foodDao.selectFoodName().stream().map(foodName -> {
             return new FoodNameEntity(foodName);
         }).collect(Collectors.toList());

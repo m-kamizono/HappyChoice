@@ -111,6 +111,6 @@ function cngHira(searchVal) {
 
 /** 検索候補機能表示 */
 function selectSearchWordText() {
-    var searchWordText = document.getElementById( 'searchWord' );
-    searchWordText.attributes[3].value = (searchWordText.length == 0) ? '' : 'foodName';
+    var searchWordText = document.getElementById('searchWord');
+    searchWordText.attributes['list'].value = (searchWordText.length == 0) ? '' : 'foodName';
 }

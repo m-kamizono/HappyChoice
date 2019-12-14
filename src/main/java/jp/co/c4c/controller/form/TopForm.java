@@ -12,7 +12,7 @@ public class TopForm {
     /** キャラクター番号 */
     private String characterNum;
     /** 検索候補文言リスト */
-    private List<FoodNameEntity> suggestWordList;
+    private List<FoodNameEntity> foodNameList;
     /** 検索値結果フラグ */
     private boolean emptyResultFlg;
 
@@ -36,15 +36,15 @@ public class TopForm {
      * 検索候補文言リスト
      * @return 検索候補文言リスト
      */
-    public List<FoodNameEntity> getSuggestWordList() {
-        return suggestWordList;
+    public List<FoodNameEntity> getFoodNameList() {
+        return foodNameList;
     }
     /**
      * 検索候補文言リスト
-     * @param suggestWordList 検索候補文言リスト
+     * @param foodNameList 検索候補文言リスト
      */
-    public void setSuggestWordList(List<FoodNameEntity> suggestWordList) {
-        this.suggestWordList = suggestWordList;
+    public void setFoodNameList(List<FoodNameEntity> foodNameList) {
+        this.foodNameList = foodNameList;
     }
     /**
      * 検索値結果フラグ
