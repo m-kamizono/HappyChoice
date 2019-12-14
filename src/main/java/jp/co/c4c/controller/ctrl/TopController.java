@@ -28,7 +28,7 @@ public class TopController {
         Random random = new Random();
         // 現在3種類のキャラクター番号をランダム発行 3桁数字に成型
         form.setCharacterNum(String.format("%03d",random.nextInt(3)+1));
-        form.setSuggestWordList(topService.choiceFoodName());
+        form.setFoodNameList(topService.getFoodName());
 
         return "/hc_top";
     }
@@ -42,7 +42,7 @@ public class TopController {
     @RequestMapping(value="modal")
     public String modalOpen(Model model, TopForm form) {
         form.setEmptyResultFlg(true);
-        form.setSuggestWordList(topService.choiceFoodName());
+        form.setFoodNameList(topService.getFoodName());
 
         return "/hc_top";
     }
