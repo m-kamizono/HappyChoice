@@ -36,11 +36,14 @@
     </div>
    </div>
    <div class="search">
-    <input type="text" name="searchWord" id="searchWord" list="" onInput="selectSearchWordText();" onkeyup="selectSearchWordText();" onblur="selectSearchWordText();" autocomplete="off" />
+    <input type="text" name="searchWord" id="searchWord" list="noFoodName" onInput="selectSearchWordText();" onkeyup="selectSearchWordText();" onblur="selectSearchWordText();" autocomplete="off" />
     <datalist id="foodName">
      <c:forEach items="${topForm.foodNameList}" var="item">
       <option class="word" value="${item.foodNameKana}" label="${item.foodName}"></option>
      </c:forEach>
+    </datalist>
+    <datalist id="noFoodName">
+     <option class="word" value=""></option>
     </datalist>
     <div class="btn" id="js-show-modal" onclick="valid();">検索</div>
    </div>
