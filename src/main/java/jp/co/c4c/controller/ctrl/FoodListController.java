@@ -39,6 +39,10 @@ public class FoodListController {
             return "forward:/modal";
         }
 
+        if(foodList.size() == 1) {
+        return "forward:/foodrecom?foodId=" + foodList.get(0).getFoodId();
+    }
+
         // 取得した食品リストをformにセット
         form.setFoodList(foodList);
 
