@@ -125,4 +125,5 @@ ul.foodlist li div p {
 /** 食品選択画面 戻るボタン */
 section.contents div.btn {
  margin-top: 10px;
+ display: flex;
 }
