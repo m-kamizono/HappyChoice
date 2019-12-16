@@ -41,7 +41,7 @@ public class FoodListController {
 
         // 取得した食品リストが1件だった場合、相方表示画面へ遷移
         if(foodList.size() == 1) {
-        return "forward:/foodrecom?foodId=" + foodList.get(0).getFoodId();
+            return "forward:/foodrecom?foodId=" + foodList.get(0).getFoodId();
         }
 
         // 取得した食品リストをformにセット
