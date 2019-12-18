@@ -43,7 +43,7 @@
      </c:forEach>
     </datalist>
     <datalist id="noFoodName">
-     <option class="noword" value=""></option>
+     <option class="word" value=""></option>
     </datalist>
     <div class="btn" id="js-show-modal" onclick="valid();">検索</div>
    </div>
