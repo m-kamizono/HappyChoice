@@ -2,7 +2,7 @@ package jp.co.c4c.service.entity;
 
 import java.util.Base64;
 import java.util.Collections;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 import jp.co.c4c.db.dto.HC_M_FoodDto;
@@ -110,11 +110,11 @@ public class FoodEntity {
             this.foodImg = Base64.getEncoder().encodeToString(foodDto.getFoodImg());
         }
 
-        // 不足栄養素メッセージを設定する処理
+        // 不足栄養素名を設定する処理
         if (lessNutFlg) {
-            Map<String, Integer> nutMap = new HashMap<String, Integer>();
+            Map<String, Integer> nutMap = new LinkedHashMap<String, Integer>();
             nutMap.put("炭水化物", foodDto.getCarbo());
-            nutMap.put("タンパク質", foodDto.getProt());
+            nutMap.put("たんぱく質", foodDto.getProt());
             nutMap.put("脂質", foodDto.getFat());
             nutMap.put("ビタミンA", foodDto.getVa());
             nutMap.put("ビタミンB1", foodDto.getVb1());
@@ -129,7 +129,7 @@ public class FoodEntity {
             this.lessNutNames = nutMap
                     .entrySet()
                     .stream()
-                    .filter( entry -> { return minNutNum == entry.getValue(); })
+                    .filter( entry -> minNutNum == entry.getValue() )
                     .map( lessNut -> lessNut.getKey() )
                     .toArray( s -> new String[s]);
         }
