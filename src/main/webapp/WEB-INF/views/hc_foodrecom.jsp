@@ -31,7 +31,7 @@
     </div>
     <div class="text-area">
      <p class="left">${foodRecomForm.selectedFoodEty.foodName}は</p>
-     <p class="center"><c:forEach items="${foodRecomForm.selectedFoodEty.lessNutNames}" var="item" varStatus="sts">${item}<c:if test="${!sts.last}">、</c:if></c:forEach></p>
+     <div class="center"><div><p><c:forEach items="${foodRecomForm.selectedFoodEty.lessNutNames}" var="item" varStatus="sts"><span style="display: inline-block;">${item}<c:if test="${!sts.last}">、</c:if></span></c:forEach></p></div></div>
      <p class="right">が不足しているよ！</p>
     </div>
    </div>
