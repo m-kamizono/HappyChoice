@@ -57,35 +57,36 @@ section.container section.contents div.select-food div p.left {
  font-size: 12px;
  height: 14px;
  width: 100%;
- margin: 5px 0px;
 }
 
-section.container section.contents div.select-food div div.center {
- width: calc(100% - 5px);
- height: calc(100% - 50px);
- margin: 5px;
- text-align: center;
- display: table;
-}
-
-section.container section.contents div.select-food div div.center div {
- display: table-cell;
- vertical-align: middle;
-}
-
-section.container section.contents div.select-food div div.center p {
+section.container section.contents div.select-food div p.center {
  font-size: 12px;
+ width: 100%;
+ height: calc(100% - 50px);
  font-weight: bold;
+ vertical-align: middle;
  text-align: center;
- margin: 0;
+ display: -webkit-flex;
+ display: flex;
+ -webkit-align-items: center;
+ align-items: center;
+ -webkit-justify-content: center;
+ justify-content: center;
 }
 
 section.container section.contents div.select-food div p.right {
  font-size: 12px;
  height: 12px;
  width: 100%;
- margin: 5px 0px 0px 0px;
  text-align: right;
+}
+
+section.container section.contents div.select-food p {
+ background: #ffffff;
+ width: 100%;
+ height: 100px;
+ margin: 5px 0px;
+ border-radius: 5px;
 }
 
 section.container section.contents div.scrollable‐box {
