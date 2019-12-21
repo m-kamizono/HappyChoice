@@ -5,21 +5,19 @@
 /* ロゴ・検索エリア */
 section.container section.header {
  width: 100%;
- height: 100px;
- text-align: center;
+ padding: 5px 0;
 }
 
 /* ロゴ部分 */
 section.container section.header div.logo img {
- width: 320px;
- height: 108px;
+ width: 100%;
 }
 
 /* おすすめ食品部分 */
 section.container section.contents {
  width: -webkit-calc(100% - 20px);
- height: -webkit-calc(100% - 90px - 110px - 60px);
- margin: 10px 10px 10px 10px;
+ height: -webkit-calc(100% - 190px - 110px - 60px);
+ margin: 0px 10px 20px 10px;
 }
 
 section.container section.contents div.select-food {
@@ -32,7 +30,7 @@ section.container section.contents div.select-food {
 
 section.container section.contents div.select-food div.img-area {
  height: 100%;
- width: 100px;
+ width: 150px;
  display: inline-block;
  vertical-align: top;
  margin: 0px;
@@ -42,27 +40,28 @@ section.container section.contents div.select-food div.img-area img {
  width: 87.5px;
  height: 70px;
  border-radius: 5px;
- margin: 20px 0px 20px 10px;
+ margin: 20px 30px;
 }
 
 section.container section.contents div.select-food div.text-area {
  height: calc(100% - 10px);
- width: calc(100% - 120px);
+ width: calc(100% - 170px);
  display: inline-block;
  vertical-align: top;
- margin: 5px;
+ margin: 10px 5px 5px 5px;
 }
 
 section.container section.contents div.select-food div p.left {
- font-size: 12px;
- height: 14px;
+ font-size: 13px;
+ height: 18px;
  width: 100%;
 }
 
 section.container section.contents div.select-food div p.center {
- font-size: 12px;
+ font-size: 13px;
  width: 100%;
- height: calc(100% - 50px);
+ height: calc(100% - 60px);
+ font-size: 13px;
  font-weight: bold;
  vertical-align: middle;
  text-align: center;
@@ -75,8 +74,8 @@ section.container section.contents div.select-food div p.center {
 }
 
 section.container section.contents div.select-food div p.right {
- font-size: 12px;
- height: 12px;
+ font-size: 13px;
+ height: 18px;
  width: 100%;
  text-align: right;
 }
@@ -92,7 +91,7 @@ section.container section.contents div.select-food p {
 section.container section.contents div.scrollable‐box {
  background: #ffffff;
  width: 100%;
- height: calc(100% - 120px);
+ height: calc(100% - 110px);
  overflow: auto;
  border-radius: 5px;
 }
