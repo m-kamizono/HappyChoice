@@ -25,6 +25,16 @@
    </div>
   </section>
   <section class="contents">
+   <div class="select-food">
+   <div class="img-area">
+     <img src="data:image/png;base64,${foodRecomForm.selectedFoodEty.foodImg}" alt="" />
+    </div>
+    <div class="text-area">
+     <p class="left">${foodRecomForm.selectedFoodEty.foodName}は</p>
+     <div class="center"><div><p><c:forEach items="${foodRecomForm.selectedFoodEty.lessNutNames}" var="item" varStatus="sts"><span style="display: inline-block;">${item}<c:if test="${!sts.last}">、</c:if></span></c:forEach></p></div></div>
+     <p class="right">が不足しているよ！</p>
+    </div>
+   </div>
    <div class="scrollable‐box">
     <ul class="recomfoodlist">
      <c:forEach items="${foodRecomForm.recomFoodEtyList}" var="item" varStatus="sts">
@@ -40,7 +50,7 @@
   </section>
   <div class="fuki-area">
    <div class="fuki-back">
-    <p>${foodRecomForm.selectedFoodEty.lessNutMsg}</p>
+    <p>不足している栄養素を<br>補う食品を食べよう！</p>
    </div>
    <div class="chara-area">
     <img src="/happychoice/resources/img/hc_chara${foodRecomForm.characterNum}.png" alt="" />

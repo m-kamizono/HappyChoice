@@ -2,9 +2,8 @@ package jp.co.c4c.service.entity;
 
 import java.util.Base64;
 import java.util.Collections;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 import jp.co.c4c.db.dto.HC_M_FoodDto;
 
@@ -21,8 +20,8 @@ public class FoodEntity {
     private String foodNameKana;
     /** 画像データ */
     private String foodImg;
-    /** 不足栄養メッセージ */
-    private String lessNutMsg;
+    /** 不足栄養素名 */
+    private String[] lessNutNames;
 
     /**
      * 食品IDを取得する
@@ -81,18 +80,18 @@ public class FoodEntity {
         this.foodImg = foodImg;
     }
     /**
-     * 不足栄養メッセージを取得する
-     * @return 不足栄養メッセージ
+     * 不足栄養素名を取得する
+     * @return 不足栄養素名
      */
-    public String getLessNutMsg() {
-        return lessNutMsg;
+    public String[] getLessNutNames() {
+        return lessNutNames;
     }
     /**
-     * 不足栄養メッセージを設定する
-     * @param lessNutMsg 不足栄養メッセージ
+     * 不足栄養素名を設定する
+     * @param lessNutNames 不足栄養素名
      */
-    public void setLessNutMsg(String lessNutMsg) {
-        this.lessNutMsg = lessNutMsg;
+    public void setLessNutNames(String[] lessNutNames) {
+        this.lessNutNames = lessNutNames;
     }
 
     public FoodEntity() {
@@ -100,7 +99,7 @@ public class FoodEntity {
         this.foodName = null;
         this.foodNameKana = null;
         this.foodImg = null;
-        this.lessNutMsg = null;
+        this.lessNutNames = null;
     }
 
     public FoodEntity(HC_M_FoodDto foodDto, boolean lessNutFlg) {
@@ -111,11 +110,11 @@ public class FoodEntity {
             this.foodImg = Base64.getEncoder().encodeToString(foodDto.getFoodImg());
         }
 
-        // 不足栄養素メッセージを設定する処理
+        // 不足栄養素名を設定する処理
         if (lessNutFlg) {
-            Map<String, Integer> nutMap = new HashMap<String, Integer>();
+            Map<String, Integer> nutMap = new LinkedHashMap<String, Integer>();
             nutMap.put("炭水化物", foodDto.getCarbo());
-            nutMap.put("タンパク質", foodDto.getProt());
+            nutMap.put("たんぱく質", foodDto.getProt());
             nutMap.put("脂質", foodDto.getFat());
             nutMap.put("ビタミンA", foodDto.getVa());
             nutMap.put("ビタミンB1", foodDto.getVb1());
@@ -127,14 +126,12 @@ public class FoodEntity {
             nutMap.put("食塩相当量", foodDto.getSalt());
 
             int minNutNum = Collections.min(nutMap.values());
-            String lessNutNames = nutMap
+            this.lessNutNames = nutMap
                     .entrySet()
                     .stream()
-                    .filter( entry -> { return minNutNum == entry.getValue(); })
-                    .map( minNut -> minNut.getKey() )
-                    .collect(Collectors.joining("と"));
-
-            this.lessNutMsg = "不足している" + lessNutNames + "を補う食品を食べよう！";
+                    .filter( entry -> minNutNum == entry.getValue() )
+                    .map( lessNut -> lessNut.getKey() )
+                    .toArray( s -> new String[s]);
         }
     }
 
