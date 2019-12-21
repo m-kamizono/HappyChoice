@@ -4,6 +4,7 @@ import java.util.Base64;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import jp.co.c4c.db.dto.HC_M_FoodDto;
 
@@ -20,8 +21,8 @@ public class FoodEntity {
     private String foodNameKana;
     /** 画像データ */
     private String foodImg;
-    /** 不足栄養素名 */
-    private String[] lessNutNames;
+    /** 不足栄養メッセージ */
+    private String lessNutMsg;
 
     /**
      * 食品IDを取得する
@@ -80,18 +81,18 @@ public class FoodEntity {
         this.foodImg = foodImg;
     }
     /**
-     * 不足栄養素名を取得する
-     * @return 不足栄養素名
+     * 不足栄養メッセージを取得する
+     * @return 不足栄養メッセージ
      */
-    public String[] getLessNutNames() {
-        return lessNutNames;
+    public String getLessNutMsg() {
+        return lessNutMsg;
     }
     /**
-     * 不足栄養素名を設定する
-     * @param lessNutNames 不足栄養素名
+     * 不足栄養メッセージを設定する
+     * @param lessNutMsg 不足栄養メッセージ
      */
-    public void setLessNutNames(String[] lessNutNames) {
-        this.lessNutNames = lessNutNames;
+    public void setLessNutMsg(String lessNutMsg) {
+        this.lessNutMsg = lessNutMsg;
     }
 
     public FoodEntity() {
@@ -99,7 +100,7 @@ public class FoodEntity {
         this.foodName = null;
         this.foodNameKana = null;
         this.foodImg = null;
-        this.lessNutNames = null;
+        this.lessNutMsg = null;
     }
 
     public FoodEntity(HC_M_FoodDto foodDto, boolean lessNutFlg) {
@@ -126,12 +127,14 @@ public class FoodEntity {
             nutMap.put("食塩相当量", foodDto.getSalt());
 
             int minNutNum = Collections.min(nutMap.values());
-            this.lessNutNames = nutMap
+            String lessNutNames = nutMap
                     .entrySet()
                     .stream()
                     .filter( entry -> { return minNutNum == entry.getValue(); })
-                    .map( lessNut -> lessNut.getKey() )
-                    .toArray( s -> new String[s]);
+                    .map( minNut -> minNut.getKey() )
+                    .collect(Collectors.joining("と"));
+
+            this.lessNutMsg = "不足している" + lessNutNames + "を補う食品を食べよう！";
         }
     }
 

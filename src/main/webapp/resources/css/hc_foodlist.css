@@ -90,6 +90,13 @@ ul.foodlist {
  font-size: 0px;
 }
 
+ul.foodlist::after { /* 戻るボタン分のpadding-bottomのための擬似要素 */
+ content: '';
+ display: block;
+ width: 1px;
+ height: 50px;
+}
+
 ul.foodlist li {
  height: 105px;
  width: 33.3%;
