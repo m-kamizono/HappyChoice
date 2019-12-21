@@ -113,9 +113,7 @@ public class FoodEntity {
         // 不足栄養素名を設定する処理
         if (lessNutFlg) {
             Map<String, Integer> nutMap = new LinkedHashMap<String, Integer>();
-            nutMap.put("炭水化物", foodDto.getCarbo());
             nutMap.put("たんぱく質", foodDto.getProt());
-            nutMap.put("脂質", foodDto.getFat());
             nutMap.put("ビタミンA", foodDto.getVa());
             nutMap.put("ビタミンB1", foodDto.getVb1());
             nutMap.put("ビタミンB2", foodDto.getVb2());
